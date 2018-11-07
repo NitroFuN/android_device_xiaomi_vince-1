@@ -50,6 +50,7 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
+<<<<<<< HEAD
     init.goodix.sh \
     init.recovery.qcom.rc \
     init.recovery.qcom.usb.rc \
@@ -82,7 +83,20 @@ PRODUCT_PACKAGES += \
     init.parallax.rc \
     init.parallax.sh
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> fe69e78... mido: XiaomiParts: Add MSM Thermal Control
+=======
+=======
+    fstab.qcom \
+    init.msm.usb.configfs.rc \
+    init.qcom.early_boot.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.rc \
+    init.qcom.sh \
+    init.qcom.usb.rc \
+    init.target.rc \
+    ueventd.qcom.rc
+>>>>>>> cf6f1e7...  Enable USB via ConfigFS
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
@@ -116,10 +130,14 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp_policy/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
     $(LOCAL_PATH)/seccomp_policy/mediaextractor-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
+<<<<<<< HEAD
 >>>>>>> fadef3f... mido :XiaomiParts ,Fixed Derp
 >>>>>>> 0fe3911... XiaomiParts: Add GPU Boost Controller
 =======
 >>>>>>> 5b1e5c2... Update for ConfigFS USB support in recovery
+=======
+>>>>>>> 8ae09d0... mido: Enable USB via ConfigFS
+>>>>>>> cf6f1e7...  Enable USB via ConfigFS
 
 # Sensors
 PRODUCT_COPY_FILES += \
