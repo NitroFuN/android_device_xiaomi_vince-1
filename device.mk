@@ -54,6 +54,7 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     init.recovery.qcom.usb.rc \
     init.vince.rc \
+<<<<<<< HEAD
     init.safailnet.rc
 <<<<<<< HEAD
 =======
@@ -71,20 +72,16 @@ PRODUCT_PACKAGES += \
 <<<<<<< HEAD
 =======
     init.safailnet.rc
-    init.gpuboost.rc \
-<<<<<<< HEAD
-    init.gpuboost.sh
->>>>>>> c6f87a8... mido: XiaomiParts: Add GPU Boost Controler
 =======
+    init.safailnet.rc \
+>>>>>>> 5b1e5c2... Update for ConfigFS USB support in recovery
+    init.gpuboost.rc \
     init.gpuboost.sh \
     init.cpuboost.rc \
-<<<<<<< HEAD
-    init.cpuboost.sh
->>>>>>> 6544015... mido: XiaomiParts: Add CPU Boost profile
-=======
     init.cpuboost.sh \
     init.parallax.rc \
     init.parallax.sh
+<<<<<<< HEAD
 >>>>>>> fe69e78... mido: XiaomiParts: Add MSM Thermal Control
 
 # RenderScript HAL
@@ -121,6 +118,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp_policy/mediaextractor-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
 >>>>>>> fadef3f... mido :XiaomiParts ,Fixed Derp
 >>>>>>> 0fe3911... XiaomiParts: Add GPU Boost Controller
+=======
+>>>>>>> 5b1e5c2... Update for ConfigFS USB support in recovery
 
 # Sensors
 PRODUCT_COPY_FILES += \
@@ -188,63 +187,5 @@ PRODUCT_BOOT_JARS += \
 
 # XiaomiParts
 PRODUCT_PACKAGES += \
-<<<<<<< HEAD
-=======
-    android.hardware.thermal@1.0-impl \
-    android.hardware.thermal@1.0-service \
-    thermal.msm8953
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
-
-# USB HAL
-PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service.basic
-
-# Vibrator
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-impl \
-    android.hardware.vibrator@1.0-service
-
-# VNDK
-PRODUCT_PACKAGES += \
-    vndk-sp
-
-# VR
-PRODUCT_PACKAGES += \
-    android.hardware.vr@1.0-impl \
-    android.hardware.vr@1.0-service \
-    vr.msm8953
-
-# Whitelisted apps
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
-    $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
-
-# Wifi
-PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service \
-    libcld80211 \
-    libwpa_client \
-    hostapd \
-    libwifi-hal-qcom \
-    wpa_supplicant \
-    wpa_supplicant.conf
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
-    $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
-    $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_cfg.ini
-
-# Wi-Fi Display
-PRODUCT_BOOT_JARS += \
-    WfdCommon
-
-# XiaomiParts
-PRODUCT_PACKAGES += \
-<<<<<<< HEAD
->>>>>>> 12c8c1a... mido: Import XiaomiParts v2.0
-=======
->>>>>>> 12c8c1a... mido: Import XiaomiParts v2.0
     XiaomiParts
 >>>>>>> 12c8c1a0... mido: Import XiaomiParts v2.0
