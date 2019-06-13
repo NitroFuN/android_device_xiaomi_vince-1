@@ -18,8 +18,10 @@ package com.xiaomi.parts;
 
 import android.os.SystemProperties;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 
 class FileUtils {
@@ -52,7 +54,10 @@ class FileUtils {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 263864f... mido: XiaomiParts: Add USB fastcharge switch
     static void setValue(String path, boolean value) {
         if (fileWritable(path)) {
             if (path == null) {
@@ -69,7 +74,10 @@ class FileUtils {
         }
     }
 
+<<<<<<< HEAD
 >>>>>>> 99bad28... mido: XiaomiParts: Add Backlight Dimmer toggle
+=======
+>>>>>>> 263864f... mido: XiaomiParts: Add USB fastcharge switch
     static void setValue(String path, double value) {
         if (fileWritable(path)) {
             if (path == null) {
@@ -103,7 +111,10 @@ class FileUtils {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 263864f... mido: XiaomiParts: Add USB fastcharge switch
     static String readLine(String filename) {
         if (filename == null) {
             return null;
@@ -136,6 +147,7 @@ class FileUtils {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99bad28... mido: XiaomiParts: Add Backlight Dimmer toggle
 =======
     static boolean getFilesValueAsBoolean(String filename, boolean defValue) {
@@ -147,6 +159,8 @@ class FileUtils {
     }
 
 >>>>>>> 35f84d2... mido: XiaomiParts: Fix Backlight Dimmer switch
+=======
+>>>>>>> 263864f... mido: XiaomiParts: Add USB fastcharge switch
     static void setProp(String prop, boolean value) {
         if (value) {
             SystemProperties.set(prop, "1");

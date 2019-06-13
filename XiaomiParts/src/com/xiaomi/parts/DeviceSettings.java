@@ -60,6 +60,7 @@ public class DeviceSettings extends PreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     final static String PREF_TORCH_BRIGHTNESS = "torch_brightness";
 <<<<<<< HEAD
@@ -73,14 +74,19 @@ public class DeviceSettings extends PreferenceFragment implements
 =======
 >>>>>>> 02a21e0... XiaomiParts: Fix Torch
     private final static String TORCH_1_BRIGHTNESS_PATH = "/sys/devices/soc/800f000.qcom," +
+=======
+    final static String PREF_TORCH_BRIGHTNESS = "torch_brightness";
+    public static final String TORCH_1_BRIGHTNESS_PATH = "/sys/devices/soc/800f000.qcom," +
+>>>>>>> 263864f... mido: XiaomiParts: Add USB fastcharge switch
             "spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_0/max_brightness";
-    private final static String TORCH_2_BRIGHTNESS_PATH = "/sys/devices/soc/800f000.qcom," +
+    public static final String TORCH_2_BRIGHTNESS_PATH = "/sys/devices/soc/800f000.qcom," +
             "spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_1/max_brightness";
 =======
     public static final String TORCH_1_BRIGHTNESS_PATH = "/sys/devices/soc/qpnp-flash-led-25/leds/led:torch_0/max_brightness";
     public static final String TORCH_2_BRIGHTNESS_PATH = "/sys/devices/soc/qpnp-flash-led-25/leds/led:torch_1/max_brightness";
 >>>>>>> d954cf5... Fix some stuff for XiaomiParts
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     final static String PREF_VIBRATION_STRENGTH = "vibration_strength";
     private final static String VIBRATION_STRENGTH_PATH = "/sys/devices/virtual/timed_output/vibrator/vtg_level";
@@ -129,10 +135,22 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String CATEGORY_DISPLAY = "display";
     public static final String PREF_DEVICE_KCAL = "device_kcal";
 >>>>>>> d954cf5... Fix some stuff for XiaomiParts
+=======
+    public static final String PREF_VIBRATION_STRENGTH = "vibration_strength";
+    public static final String VIBRATION_STRENGTH_PATH = "/sys/devices/virtual/timed_output/vibrator/vtg_level";
 
-    private static final String PREF_ENABLE_HAL3 = "hal3";
-    private static final String HAL3_SYSTEM_PROPERTY = "persist.camera.HAL3.enabled";
+    // value of vtg_min and vtg_max
+    public static final int MIN_VIBRATION = 116;
+    public static final int MAX_VIBRATION = 3596;
 
+    public static final String PREF_ENABLE_HAL3 = "hal3";
+    public static final String HAL3_SYSTEM_PROPERTY = "persist.camera.HAL3.enabled";
+>>>>>>> 263864f... mido: XiaomiParts: Add USB fastcharge switch
+
+    public static final String CATEGORY_DISPLAY = "display";
+    public static final String PREF_DEVICE_KCAL = "device_kcal";
+
+<<<<<<< HEAD
 <<<<<<< HEAD
     private static final String CATEGORY_DISPLAY = "display";
     private static final String PREF_DEVICE_KCAL = "device_kcal";
@@ -140,6 +158,11 @@ public class DeviceSettings extends PreferenceFragment implements
     private static final String PREF_SPECTRUM = "spectrum";
     private static final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
 =======
+=======
+    public static final String PREF_SPECTRUM = "spectrum";
+    public static final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
+
+>>>>>>> 263864f... mido: XiaomiParts: Add USB fastcharge switch
     public static final String PREF_ENABLE_DIRAC = "dirac_enabled";
     public static final String PREF_HEADSET = "dirac_headset_pref";
     public static final String PREF_PRESET = "dirac_preset_pref";
@@ -147,6 +170,7 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String HEADPHONE_GAIN_PATH = "/sys/kernel/sound_control/headphone_gain";
     public static final String PREF_MICROPHONE_GAIN = "microphone_gain";
     public static final String MICROPHONE_GAIN_PATH = "/sys/kernel/sound_control/mic_gain";
+<<<<<<< HEAD
     public static final String PREF_EARPIECE_GAIN = "earpiece_gain";
     public static final String EARPIECE_GAIN_PATH = "/sys/kernel/sound_control/earpiece_gain";
     public static final String PREF_SPEAKER_GAIN = "speaker_gain";
@@ -184,6 +208,13 @@ public class DeviceSettings extends PreferenceFragment implements
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+    public static final String CATEGORY_FASTCHARGE = "usb_fastcharge";
+    public static final String PREF_USB_FASTCHARGE = "fastcharge";
+    public static final String USB_FASTCHARGE_PATH = "/sys/kernel/fast_charge/force_fast_charge";
+
+>>>>>>> 263864f... mido: XiaomiParts: Add USB fastcharge switch
     private SecureSettingSwitchPreference mEnableHAL3;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -298,6 +329,7 @@ public class DeviceSettings extends PreferenceFragment implements
 <<<<<<< HEAD
     private SecureSettingCustomSeekBarPreference mHeadphoneGain;
     private SecureSettingCustomSeekBarPreference mMicrophoneGain;
+<<<<<<< HEAD
 =======
     private CustomSeekBarPreference mHeadphoneGain;
     private CustomSeekBarPreference mMicrophoneGain;
@@ -325,6 +357,9 @@ public class DeviceSettings extends PreferenceFragment implements
     private SecureSettingListPreference mGPUBOOST;
     private SecureSettingListPreference mCPUBOOST;
     private static Context mContext;
+=======
+    private SecureSettingSwitchPreference mFastcharge;
+>>>>>>> 263864f... mido: XiaomiParts: Add USB fastcharge switch
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -435,6 +470,7 @@ public class DeviceSettings extends PreferenceFragment implements
         mMicrophoneGain = (CustomSeekBarPreference) findPreference(PREF_MICROPHONE_GAIN);
         mMicrophoneGain.setOnPreferenceChangeListener(this);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
         mEarpieceGain = (CustomSeekBarPreference) findPreference(PREF_EARPIECE_GAIN);
@@ -540,6 +576,16 @@ public class DeviceSettings extends PreferenceFragment implements
 >>>>>>> 494253b... mido: XiaomiParts: Add FPS info
 =======
 >>>>>>> 494253b... mido: XiaomiParts: Add FPS info
+=======
+
+        if (FileUtils.fileWritable(USB_FASTCHARGE_PATH)) {
+            mFastcharge = (SecureSettingSwitchPreference) findPreference(PREF_USB_FASTCHARGE);
+            mFastcharge.setChecked(FileUtils.getFileValueAsBoolean(USB_FASTCHARGE_PATH, true));
+            mFastcharge.setOnPreferenceChangeListener(this);
+        } else {
+            getPreferenceScreen().removePreference(findPreference(CATEGORY_FASTCHARGE));
+        }
+>>>>>>> 263864f... mido: XiaomiParts: Add USB fastcharge switch
     }
 
 
@@ -640,6 +686,7 @@ public class DeviceSettings extends PreferenceFragment implements
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
             case PREF_EARPIECE_GAIN:
@@ -662,10 +709,13 @@ public class DeviceSettings extends PreferenceFragment implements
 
 <<<<<<< HEAD
 >>>>>>> 1448afb... Revert "mido: XiaomiParts: Disable USB Fastcharge toggle"
+=======
+>>>>>>> 263864f... mido: XiaomiParts: Add USB fastcharge switch
             case PREF_USB_FASTCHARGE:
                 FileUtils.setValue(USB_FASTCHARGE_PATH, (boolean) value);
                 break;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -722,6 +772,8 @@ public class DeviceSettings extends PreferenceFragment implements
 >>>>>>> 494253b... mido: XiaomiParts: Add FPS info
 =======
 >>>>>>> 494253b... mido: XiaomiParts: Add FPS info
+=======
+>>>>>>> 263864f... mido: XiaomiParts: Add USB fastcharge switch
             default:
                 break;
         }

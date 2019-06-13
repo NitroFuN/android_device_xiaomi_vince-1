@@ -34,17 +34,6 @@ import com.xiaomi.parts.ambient.SensorsDozeService;
 
 public class BootReceiver extends BroadcastReceiver implements Utils {
 
-    private final String TORCH_1_BRIGHTNESS_PATH = "/sys/devices/soc/800f000.qcom,spmi/spmi-0/" +
-            "spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_0/" +
-            "max_brightness";
-    private final String TORCH_2_BRIGHTNESS_PATH = "/sys/devices/soc/800f000.qcom,spmi/spmi-0/" +
-            "spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_1/" +
-            "max_brightness";
-    private final String VIBRATION_STRENGTH_PATH = "/sys/devices/virtual/timed_output/vibrator" +
-            "/vtg_level";
-    private final String HEADPHONE_GAIN_PATH = "/sys/kernel/sound_control/headphone_gain";
-    private final String MICROPHONE_GAIN_PATH = "/sys/kernel/sound_control/mic_gain";
-
     public void onReceive(Context context, Intent intent) {
 
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
@@ -83,15 +72,19 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
             YellowFlashPreference.restore(context);
         }
 
-        FileUtils.setValue(TORCH_1_BRIGHTNESS_PATH,
+        FileUtils.setValue(DeviceSettings.TORCH_1_BRIGHTNESS_PATH,
                 Settings.Secure.getInt(context.getContentResolver(),
 <<<<<<< HEAD
                         DeviceSettings.PREF_TORCH_BRIGHTNESS, 100));
-        FileUtils.setValue(TORCH_2_BRIGHTNESS_PATH,
+        FileUtils.setValue(DeviceSettings.TORCH_2_BRIGHTNESS_PATH,
                 Settings.Secure.getInt(context.getContentResolver(),
                         DeviceSettings.PREF_TORCH_BRIGHTNESS, 100));
+<<<<<<< HEAD
 <<<<<<< HEAD
         FileUtils.setValue(VIBRATION_STRENGTH_PATH, Settings.Secure.getInt(
+=======
+        FileUtils.setValue(DeviceSettings.VIBRATION_STRENGTH_PATH, Settings.Secure.getInt(
+>>>>>>> 263864f... mido: XiaomiParts: Add USB fastcharge switch
                 context.getContentResolver(), DeviceSettings.PREF_VIBRATION_STRENGTH, 80) / 100.0 * (DeviceSettings.MAX_VIBRATION - DeviceSettings.MIN_VIBRATION) + DeviceSettings.MIN_VIBRATION);
 =======
 >>>>>>> e3cd0f3... mido: XiaomiParts:: Implement New CustomSeekBar
@@ -112,9 +105,10 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
 >>>>>>> fe69e78... mido: XiaomiParts: Add MSM Thermal Control
         int gain = Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_HEADPHONE_GAIN, 4);
-        FileUtils.setValue(HEADPHONE_GAIN_PATH, gain + " " + gain);
-        FileUtils.setValue(MICROPHONE_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
+        FileUtils.setValue(DeviceSettings.HEADPHONE_GAIN_PATH, gain + " " + gain);
+        FileUtils.setValue(DeviceSettings.MICROPHONE_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_MICROPHONE_GAIN, 0));
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         FileUtils.setValue(DeviceSettings.EARPIECE_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
@@ -151,6 +145,10 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
 >>>>>>> ba23a0f... mido: XiaomiParts: Add TouchBoost toggles
         // Dirac
 >>>>>>> a2e2ce2... mido: XiaomiParts: Add Ambient Display Gestures
+=======
+        FileUtils.setValue(DeviceSettings.USB_FASTCHARGE_PATH, Settings.Secure.getInt(context.getContentResolver(),
+                DeviceSettings.PREF_USB_FASTCHARGE, 0));
+>>>>>>> 263864f... mido: XiaomiParts: Add USB fastcharge switch
         context.startService(new Intent(context, DiracService.class));
 
        // Ambient
