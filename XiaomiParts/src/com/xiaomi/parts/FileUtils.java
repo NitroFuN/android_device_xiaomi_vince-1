@@ -51,6 +51,25 @@ class FileUtils {
         }
     }
 
+<<<<<<< HEAD
+=======
+    static void setValue(String path, boolean value) {
+        if (fileWritable(path)) {
+            if (path == null) {
+                return;
+            }
+            try {
+                FileOutputStream fos = new FileOutputStream(new File(path));
+                fos.write((value ? "Y" : "N").getBytes());
+                fos.flush();
+                fos.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+>>>>>>> 99bad28... mido: XiaomiParts: Add Backlight Dimmer toggle
     static void setValue(String path, double value) {
         if (fileWritable(path)) {
             if (path == null) {
@@ -83,6 +102,40 @@ class FileUtils {
         }
     }
 
+<<<<<<< HEAD
+=======
+    static String readLine(String filename) {
+        if (filename == null) {
+            return null;
+        }
+        BufferedReader br = null;
+        String line;
+        try {
+            br = new BufferedReader(new FileReader(filename), 1024);
+            line = br.readLine();
+        } catch (IOException e) {
+            return null;
+        } finally {
+            if (br != null) {
+                try {
+                    br.close();
+                } catch (IOException e) {
+                    // ignore
+                }
+            }
+        }
+        return line;
+    }
+
+    static boolean getFileValueAsBoolean(String filename, boolean defValue) {
+        String fileValue = readLine(filename);
+        if (fileValue != null) {
+            return !fileValue.equals("N");
+        }
+        return defValue;
+    }
+
+>>>>>>> 99bad28... mido: XiaomiParts: Add Backlight Dimmer toggle
     static void setProp(String prop, boolean value) {
         if (value) {
             SystemProperties.set(prop, "1");
