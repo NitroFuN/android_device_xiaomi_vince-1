@@ -71,11 +71,26 @@ public class DeviceSettings extends PreferenceFragment implements
     private static final String PREF_ENABLE_HAL3 = "hal3";
     private static final String HAL3_SYSTEM_PROPERTY = "persist.camera.HAL3.enabled";
 
+<<<<<<< HEAD
     private static final String CATEGORY_DISPLAY = "display";
     private static final String PREF_DEVICE_KCAL = "device_kcal";
 
     private static final String PREF_SPECTRUM = "spectrum";
     private static final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
+=======
+    public static final String PREF_ENABLE_DIRAC = "dirac_enabled";
+    public static final String PREF_HEADSET = "dirac_headset_pref";
+    public static final String PREF_PRESET = "dirac_preset_pref";
+    public static final String PREF_HEADPHONE_GAIN = "headphone_gain";
+    public static final String HEADPHONE_GAIN_PATH = "/sys/kernel/sound_control/headphone_gain";
+    public static final String PREF_MICROPHONE_GAIN = "microphone_gain";
+    public static final String MICROPHONE_GAIN_PATH = "/sys/kernel/sound_control/mic_gain";
+    public static final String PREF_EARPIECE_GAIN = "earpiece_gain";
+    public static final String EARPIECE_GAIN_PATH = "/sys/kernel/sound_control/earpiece_gain";
+    public static final String CATEGORY_FASTCHARGE = "usb_fastcharge";
+    public static final String PREF_USB_FASTCHARGE = "fastcharge";
+    public static final String USB_FASTCHARGE_PATH = "/sys/kernel/fast_charge/force_fast_charge";
+>>>>>>> 0c9feb4... mido: XiaomiParts: Add Earpiece Gain
 
     private static final String PREF_ENABLE_DIRAC = "dirac_enabled";
     private static final String PREF_HEADSET = "dirac_headset_pref";
@@ -137,9 +152,13 @@ public class DeviceSettings extends PreferenceFragment implements
 =======
     private CustomSeekBarPreference mHeadphoneGain;
     private CustomSeekBarPreference mMicrophoneGain;
+    private CustomSeekBarPreference mEarpieceGain;
     private SecureSettingSwitchPreference mFastcharge;
+<<<<<<< HEAD
 >>>>>>> e3cd0f3... mido: XiaomiParts:: Implement New CustomSeekBar
 
+=======
+>>>>>>> 0c9feb4... mido: XiaomiParts: Add Earpiece Gain
     private SecureSettingSwitchPreference mBacklightDimmer;
 
     @Override
@@ -214,6 +233,20 @@ public class DeviceSettings extends PreferenceFragment implements
 
         mMicrophoneGain = (CustomSeekBarPreference) findPreference(PREF_MICROPHONE_GAIN);
         mMicrophoneGain.setOnPreferenceChangeListener(this);
+<<<<<<< HEAD
+=======
+
+        mEarpieceGain = (CustomSeekBarPreference) findPreference(PREF_EARPIECE_GAIN);
+        mEarpieceGain.setOnPreferenceChangeListener(this);
+
+        if (FileUtils.fileWritable(USB_FASTCHARGE_PATH)) {
+            mFastcharge = (SecureSettingSwitchPreference) findPreference(PREF_USB_FASTCHARGE);
+            mFastcharge.setChecked(FileUtils.getFileValueAsBoolean(USB_FASTCHARGE_PATH, true));
+            mFastcharge.setOnPreferenceChangeListener(this);
+        } else {
+            getPreferenceScreen().removePreference(findPreference(CATEGORY_FASTCHARGE));
+        }
+>>>>>>> 0c9feb4... mido: XiaomiParts: Add Earpiece Gain
     }
 
     @Override
@@ -271,7 +304,14 @@ public class DeviceSettings extends PreferenceFragment implements
                 break;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+            case PREF_EARPIECE_GAIN:
+                FileUtils.setValue(EARPIECE_GAIN_PATH, (int) value);
+                break;
+
+>>>>>>> 0c9feb4... mido: XiaomiParts: Add Earpiece Gain
             case PREF_USB_FASTCHARGE:
                 FileUtils.setValue(USB_FASTCHARGE_PATH, (boolean) value);
                 break;
