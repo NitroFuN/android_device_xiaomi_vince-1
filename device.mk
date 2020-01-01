@@ -50,7 +50,6 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-<<<<<<< HEAD
     init.goodix.sh \
     init.recovery.qcom.rc \
     init.recovery.qcom.usb.rc \
@@ -81,15 +80,17 @@ PRODUCT_PACKAGES += \
     init.cpuboost.rc \
     init.cpuboost.sh \
     init.parallax.rc \
+<<<<<<< HEAD
     init.parallax.sh
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> fe69e78... mido: XiaomiParts: Add MSM Thermal Control
 =======
 =======
+=======
+    init.parallax.sh \
+>>>>>>> bcb6403... Add aud_pasthru_adsp access for audio..
     fstab.qcom \
-    init.msm.usb.configfs.rc \
-    init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
     init.qcom.rc \
     init.qcom.sh \
@@ -98,6 +99,7 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 >>>>>>> cf6f1e7...  Enable USB via ConfigFS
 
+<<<<<<< HEAD
 # RenderScript HAL
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
@@ -139,6 +141,8 @@ PRODUCT_COPY_FILES += \
 >>>>>>> 8ae09d0... mido: Enable USB via ConfigFS
 >>>>>>> cf6f1e7...  Enable USB via ConfigFS
 
+=======
+>>>>>>> bcb6403... Add aud_pasthru_adsp access for audio..
 # Sensors
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf
