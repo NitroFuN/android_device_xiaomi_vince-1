@@ -194,8 +194,9 @@ public class DeviceSettings extends PreferenceFragment implements
 
         if (FileUtils.fileWritable(BACKLIGHT_DIMMER_PATH)) {
             mBacklightDimmer = (SecureSettingSwitchPreference) findPreference(PREF_BACKLIGHT_DIMMER);
-            mBacklightDimmer.setChecked(FileUtils.getFileValueAsBoolean(BACKLIGHT_DIMMER_PATH, false));
-            mBacklightDimmer.setOnPreferenceChangeListener(this);
+            mBacklightDimmer.setEnabled(BacklightDimmer.isSupported());
+            mBacklightDimmer.setChecked(BacklightDimmer.isCurrentlyEnabled(this.getContext()));
+            mBacklightDimmer.setOnPreferenceChangeListener(new BacklightDimmer(getContext()));
         } else {
             getPreferenceScreen().removePreference(findPreference(PREF_BACKLIGHT_DIMMER));
         }
@@ -317,11 +318,14 @@ public class DeviceSettings extends PreferenceFragment implements
                 FileUtils.setValue(USB_FASTCHARGE_PATH, (boolean) value);
                 break;
 
+<<<<<<< HEAD
             case PREF_BACKLIGHT_DIMMER:
                 FileUtils.setValue(BACKLIGHT_DIMMER_PATH, (boolean) value);
                 break;
 
 >>>>>>> 99bad28... mido: XiaomiParts: Add Backlight Dimmer toggle
+=======
+>>>>>>> cd02f85... mido: XiaomiParts: Backlight Dimmer improvement
             default:
                 break;
         }
