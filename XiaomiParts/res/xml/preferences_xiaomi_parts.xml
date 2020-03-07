@@ -319,8 +319,6 @@
             android:title="@string/speaker_gain" />
 
     </PreferenceCategory>
-<<<<<<< HEAD
-=======
 
     <PreferenceCategory
         android:key="usb_fastcharge"
@@ -332,18 +330,7 @@
             android:icon="@drawable/ic_usb_fastcharge"
             android:summary="@string/fastcharge_summary" />
     </PreferenceCategory>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> c46caf8... mido: XiaomiParts Improvements
-=======
--->
->>>>>>> ab3b7cc... mido: XiaomiParts: Disable USB Fastcharge toggle
-=======
->>>>>>> 1448afb... Revert "mido: XiaomiParts: Disable USB Fastcharge toggle"
-=======
-
-<<<<<<< HEAD
+    
     <PreferenceCategory
         android:key="boost"
         android:title="@string/boost_title" >
@@ -354,7 +341,4 @@
             android:icon="@drawable/ic_boost"
             android:summary="@string/touchboost_summary" />
     </PreferenceCategory>
->>>>>>> ba23a0f... mido: XiaomiParts: Add TouchBoost toggles
-=======
->>>>>>> c094bfb... mido: XiaomiParts: TouchBoost Improvements
 </PreferenceScreen>

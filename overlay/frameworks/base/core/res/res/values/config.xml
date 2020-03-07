@@ -203,17 +203,10 @@
     <!-- Button brightness -->
     <bool name="config_button_brightness_support">true</bool>
 
-<<<<<<< HEAD
-    <!-- Whether to post reset runnable for all clients. Needed for some older
-         vendor fingerprint HAL implementati
-=======
-<<<<<<< HEAD
->>>>>>> 0ee67e3... mido : Add Xiaomi Parts To ZenHub
     <!-- Add Xiaomiparts To ZenHub-->
     <string name="config_device_parts_package_name" translatable="false">com.xiaomi.parts</string>
     <string name="config_device_parts_package_activity" translatable="false">com.xiaomi.parts.DeviceSettingsActivity</string>
 
-=======
     <!-- Whether to post reset runnable for all clients. Needed for some older
          vendor fingerprint HAL implementations. -->
     <bool name="config_fingerprintPostResetRunnableForAllClients">true</bool>
@@ -232,8 +225,4 @@
     <string name="config_gpu_busy_path" translatable="false">/sys/kernel/gpu/gpu_busy</string>
     <string name="config_battery_level_path" translatable="false">/sys/class/power_supply/battery/capacity</string>
 
-    <!-- Add Xiaomiparts To ZenHub-->
-    <string name="config_device_parts_package_name" translatable="false">com.xiaomi.parts</string>
-    <string name="config_device_parts_package_activity" translatable="false">com.xiaomi.parts.DeviceSettingsActivity</string>
->>>>>>> 394428f... mido : Add Xiaomi Parts To ZenHub
 </resources>

@@ -14,15 +14,8 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     package="com.xiaomi.parts"
-=======
-    package="com.asus.zenparts"
->>>>>>> 3860be5... XiaomiParts: Add USB fastcharge switch
-=======
-    package="com.xiaomi.parts"
->>>>>>> c6225e6...  Fix some stuff for XiaomiParts
     android:sharedUserId="android.uid.system">
 
     <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
@@ -39,10 +32,6 @@
     <protected-broadcast android:name="com.xiaomi.parts.CUST_UPDATE" />
 
     <application
-<<<<<<< HEAD
-	tools:replace="android:appComponentFactory"
-=======
->>>>>>> 3860be5... XiaomiParts: Add USB fastcharge switch
         android:label="@string/advanced_settings"
         android:supportsRtl="true"
         android:theme="@style/CustomOptionsTheme">
@@ -102,8 +91,8 @@
 
         <activity
             android:name="com.xiaomi.parts.ambient.AmbientGesturePreferenceActivity"
-            android:label="@string/ambient_display_gestures_title">
-            android:icon="@drawable/ic_doze"
+            android:label="@string/ambient_display_gestures_title"
+            android:icon="@drawable/ic_doze">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -114,13 +103,7 @@
             android:name=".DiracService"
             android:enabled="true"
             android:stopWithTask="false" />
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
->>>>>>> e363686... mido: XiaomiParts: Add LogTile
->>>>>>> 20bf2aa... XiaomiParts: Add LogTile
         <service
             android:name="com.xiaomi.parts.LogTile"
             android:icon="@drawable/ic_qs_log"
@@ -131,7 +114,7 @@
                     android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
-<<<<<<< HEAD
+
         <service
             android:name=".SpectrumTileService" 
             android:icon="@drawable/ic_spectrum" 
@@ -156,19 +139,7 @@
                     android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 494253b... mido: XiaomiParts: Add FPS info
-=======
->>>>>>> 494253b... mido: XiaomiParts: Add FPS info
-=======
 
-=======
->>>>>>> e3a2de3... XiaomiParts: Add GPU and CPU Boost QS Tiles
-=======
->>>>>>> a931bd2... Fixed All Errors
         <service
             android:name=".CpuboostTileService"
             android:icon="@drawable/ic_cpuboost_qs"
@@ -189,26 +160,7 @@
                 <action android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 4261289... mido: XiaomiParts: Add GPU and CPU Boost QS Tiles
-    </application>
-=======
-   </application>
-=======
-    </application>
->>>>>>> e363686... mido: XiaomiParts: Add LogTile
->>>>>>> 20bf2aa... XiaomiParts: Add LogTile
-=======
-   </application>
-=======
 
-    </application>
->>>>>>> 4261289... mido: XiaomiParts: Add GPU and CPU Boost QS Tiles
->>>>>>> e3a2de3... XiaomiParts: Add GPU and CPU Boost QS Tiles
-=======
   </application>
->>>>>>> a931bd2... Fixed All Errors
 </manifest>

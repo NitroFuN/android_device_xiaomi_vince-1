@@ -13,28 +13,11 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<resources>
-=======
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-<<<<<<< HEAD
->>>>>>> 2695abd... XiaomiParts:: Implement New CustomSeekBar
-    <string name="advanced_settings">Zenfone Parts</string>
-=======
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="advanced_settings">Xiaomi Parts</string>
->>>>>>> d954cf5... Fix some stuff for XiaomiParts
-=======
-<resources>
-    <string name="advanced_settings">Zenfone Parts</string>
->>>>>>> 3860be5... XiaomiParts: Add USB fastcharge switch
-=======
-    <string name="advanced_settings">Xiaomi Parts</string>
->>>>>>> c6225e6...  Fix some stuff for XiaomiParts
     <string name="advanced_settings_summary">Device Specific Customisations</string>
 
+    <!-- Camera2API Enabler -->
     <string name="camera_title">Camera</string>
     <string name="camera_hal3_title">Enable Camera2 API</string>
 
@@ -173,25 +156,11 @@
     <string name="preset_obsanity">Obsanity</string>
     <string name="preset_obsanity_ips">Obsanity IPS</string>
 
-<<<<<<< HEAD
-=======
     <!-- USB fastcharge -->
     <string name="usb_fastcharge_title">USB Fastcharge</string>
     <string name="fastcharge_title">Enable USB Fastcharge</string>
     <string name="fastcharge_summary">Charge upto 900mA when connected to a computer via USB 3.0 port</string>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ab3b7cc... mido: XiaomiParts: Disable USB Fastcharge toggle
-=======
-    <!-- USB fastcharge -->
-    <string name="usb_fastcharge_title">USB Fastcharge</string>
-    <string name="fastcharge_title">Enable USB Fastcharge</string>
-    <string name="fastcharge_summary">Charge upto 900mA when connected to a computer via USB 3.0 port</string>
-
->>>>>>> 7e41296... XiaomiParts: Add USB fastcharge switch
-=======
->>>>>>> 0657218... Added XiaomiParts Successfully
     <!-- menu -->
     <string name="kcal_presets" translatable="false">@string/presets_dialog_title</string>
     <string name="kcal_reset">Reset</string>
@@ -201,24 +170,15 @@
     <string name="custom_seekbar_default_value">Default</string>
     <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong press to set</string>
     <string name="custom_seekbar_default_value_is_set">Default value is set</string>
-<<<<<<< HEAD
-=======
 
-    <!-- Log Tile -->
+   <!-- Log Tile -->
     <string name="quick_settings_log_tile_label">LogTile</string>
     <string name="quick_settings_log_tile_dialog_title">Options</string>
     <string name="cannot_get_su">Action failed because of missing superuser access</string>
-<<<<<<< HEAD
 
     <!-- FPS Info -->
     <string name="fps_info_title">FPS Info Overlay</string>
     <string name="fps_info_summary">Show overlay with current frames per second</string>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 494253b... mido: XiaomiParts: Add FPS info
-=======
->>>>>>> 494253b... mido: XiaomiParts: Add FPS info
-=======
 
     <!-- Ambient gesture haptic feedback -->
     <string name="display_gestures">Gestures</string>
@@ -263,24 +223,12 @@
 
     <!-- Label for feature switch -->
     <string name="switch_bar_off">Off</string>
-<<<<<<< HEAD
->>>>>>> a2e2ce2... mido: XiaomiParts: Add Ambient Display Gestures
-=======
 
     <!-- Touchboost -->
-<<<<<<< HEAD
-    <string name="Boost_title">Touchboost</string>
-    <string name="Touchboost_title">Enable Touchboost</string>
-    <string name="Touchboost_summary">Boost cpu when touch detected for soomth experience</string>
->>>>>>> ba23a0f... mido: XiaomiParts: Add TouchBoost toggles
-=======
     <string name="boost_title">Boost</string>
     <string name="touchboost_title">Enable Touchboost</string>
     <string name="touchboost_summary">Boost cpu when touch detected for smooth experience</string>
-<<<<<<< HEAD
->>>>>>> c094bfb... mido: XiaomiParts: TouchBoost Improvements
-=======
-
+ 
     <!-- GPU Boost Profiles -->
     <string name="gpuboost_title">GPU Boost</string>
     <string name="gpuboost_summary">Boost your gpu without compromising power efficiency</string>
@@ -291,9 +239,6 @@
     <string name="gpuboost_medium">Medium</string>
     <string name="gpuboost_low">Low</string>
     <string name="gpuboost_disable">Disable</string>
-<<<<<<< HEAD
->>>>>>> c6f87a8... mido: XiaomiParts: Add GPU Boost Controler
-=======
 
     <!-- CPU Boost Profiles -->
     <string name="cpuboost_title">CPU Boost</string>
@@ -305,17 +250,12 @@
     <string name="cpuboost_medium">Medium</string>
     <string name="cpuboost_low">Low</string>
     <string name="cpuboost_disable">Disable</string>
-<<<<<<< HEAD
->>>>>>> 6544015... mido: XiaomiParts: Add CPU Boost profile
-=======
 
     <!-- LED Brightness -->
     <string name="chargingled_title">Charging LED</string>
     <string name="led_blinking_title">Blinking Intensity</string>
-<<<<<<< HEAD
->>>>>>> 4c1e9aa... mido: XiaomiParts: add Charging LED Blinking Intensity
-=======
 
+    <!-- Thermal Settings -->	
     <string name="thermal_title">Thermal</string>
     <string name="msmthermal_title">MSM Thermal</string>
     <string name="msmthermal_summary">Enable Thermal driver control</string>
@@ -336,9 +276,7 @@
     <string name="cpucore_five">5</string>
     <string name="cpucore_six">6</string>
     <string name="cpucore_seven">7</string>
-<<<<<<< HEAD
->>>>>>> fe69e78... mido: XiaomiParts: Add MSM Thermal Control
-=======
+
 
     <string name="misc_title">Miscellaneous</string>
     <!-- LKM Profiles -->
@@ -354,11 +292,8 @@
     <string name="lkmprofile_verylight">Very Light</string>
     <string name="lkmprofile_default">Default</string>
     <string name="lkmprofile_disable">Disable</string>
-<<<<<<< HEAD
->>>>>>> 9917894... mido: XiaomiParts: Add LKM Profiles
-=======
-
-    <!-- LKM Profiles -->
+   
+    <!-- LKM Profiles-->
     <string name="tcpcongestion_title">TCP Congestion</string>
     <string name="tcpcongestion_summary">Transmission Control Protocol Congestion Algorithm</string>
     <string name="tcpcongestion_dialogTitle">Choose your TCP Congestion Algorithm</string>
@@ -370,20 +305,5 @@
     <string name="tcpcongestion_bic">bic</string>
     <string name="tcpcongestion_highspeed">highspeed</string>
     <string name="tcpcongestion_htcp">htcp</string>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> e1339fb... mido: XiaomiParts: Add TCP Congestion Algorithm
-=======
 
-=======
->>>>>>> e363686... mido: XiaomiParts: Add LogTile
->>>>>>> 20bf2aa... XiaomiParts: Add LogTile
-=======
-
-=======
->>>>>>> e1339fb... mido: XiaomiParts: Add TCP Congestion Algorithm
->>>>>>> 8dbeb06... Add TCP Congestion Algorithm
-=======
->>>>>>> a931bd2... Fixed All Errors
 </resources>

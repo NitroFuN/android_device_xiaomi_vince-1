@@ -21,23 +21,10 @@
     android:minHeight="?android:attr/listPreferredItemHeightSmall"
     android:gravity="center_vertical"
     android:paddingStart="?android:attr/listPreferredItemPaddingStart"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    android:paddingEnd="?android:attr/listPreferredItemPaddingEnd">
-=======
     android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
     android:background="?android:attr/activatedBackgroundIndicator"
     android:clipToPadding="false">
->>>>>>> d954cf5... Fix some stuff for XiaomiParts
-=======
-    android:paddingEnd="?android:attr/listPreferredItemPaddingEnd">
->>>>>>> 3860be5... XiaomiParts: Add USB fastcharge switch
-=======
-    android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
-    android:background="?android:attr/activatedBackgroundIndicator"
-    android:clipToPadding="false">
->>>>>>> 2695abd... XiaomiParts:: Implement New CustomSeekBar
+
 
     <LinearLayout
         android:id="@android:id/icon_frame"
