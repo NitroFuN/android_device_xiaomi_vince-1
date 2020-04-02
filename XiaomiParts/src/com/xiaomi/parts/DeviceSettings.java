@@ -89,6 +89,7 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String PREF_EARPIECE_GAIN = "earpiece_gain";
     public static final String EARPIECE_GAIN_PATH = "/sys/kernel/sound_control/earpiece_gain";
     public static final String CATEGORY_FASTCHARGE = "usb_fastcharge";
+<<<<<<< HEAD
     public static final String PREF_USB_FASTCHARGE = "fastcharge";
     public static final String USB_FASTCHARGE_PATH = "/sys/kernel/fast_charge/force_fast_charge";
 >>>>>>> 0c9feb4... mido: XiaomiParts: Add Earpiece Gain
@@ -100,6 +101,10 @@ public class DeviceSettings extends PreferenceFragment implements
     private static final String HEADPHONE_GAIN_PATH = "/sys/kernel/sound_control/headphone_gain";
     final static String PREF_MICROPHONE_GAIN = "microphone_gain";
     private static final String MICROPHONE_GAIN_PATH = "/sys/kernel/sound_control/mic_gain";
+=======
+    //public static final String PREF_USB_FASTCHARGE = "fastcharge";
+    //public static final String USB_FASTCHARGE_PATH = "/sys/kernel/fast_charge/force_fast_charge";
+>>>>>>> ab3b7cc... mido: XiaomiParts: Disable USB Fastcharge toggle
 
     private SecureSettingSwitchPreference mEnableHAL3;
 <<<<<<< HEAD
@@ -154,12 +159,16 @@ public class DeviceSettings extends PreferenceFragment implements
     private CustomSeekBarPreference mHeadphoneGain;
     private CustomSeekBarPreference mMicrophoneGain;
     private CustomSeekBarPreference mEarpieceGain;
+<<<<<<< HEAD
     private SecureSettingSwitchPreference mFastcharge;
 <<<<<<< HEAD
 >>>>>>> e3cd0f3... mido: XiaomiParts:: Implement New CustomSeekBar
 
 =======
 >>>>>>> 0c9feb4... mido: XiaomiParts: Add Earpiece Gain
+=======
+    //private SecureSettingSwitchPreference mFastcharge;
+>>>>>>> ab3b7cc... mido: XiaomiParts: Disable USB Fastcharge toggle
     private SecureSettingSwitchPreference mBacklightDimmer;
 
     @Override
@@ -241,6 +250,7 @@ public class DeviceSettings extends PreferenceFragment implements
         mEarpieceGain = (CustomSeekBarPreference) findPreference(PREF_EARPIECE_GAIN);
         mEarpieceGain.setOnPreferenceChangeListener(this);
 
+/*
         if (FileUtils.fileWritable(USB_FASTCHARGE_PATH)) {
             mFastcharge = (SecureSettingSwitchPreference) findPreference(PREF_USB_FASTCHARGE);
             mFastcharge.setChecked(FileUtils.getFileValueAsBoolean(USB_FASTCHARGE_PATH, true));
@@ -248,8 +258,13 @@ public class DeviceSettings extends PreferenceFragment implements
         } else {
             getPreferenceScreen().removePreference(findPreference(CATEGORY_FASTCHARGE));
         }
+<<<<<<< HEAD
 >>>>>>> 0c9feb4... mido: XiaomiParts: Add Earpiece Gain
+=======
+*/
+>>>>>>> ab3b7cc... mido: XiaomiParts: Disable USB Fastcharge toggle
     }
+
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object value) {
@@ -313,10 +328,15 @@ public class DeviceSettings extends PreferenceFragment implements
                 FileUtils.setValue(EARPIECE_GAIN_PATH, (int) value);
                 break;
 
+<<<<<<< HEAD
 >>>>>>> 0c9feb4... mido: XiaomiParts: Add Earpiece Gain
+=======
+/*
+>>>>>>> ab3b7cc... mido: XiaomiParts: Disable USB Fastcharge toggle
             case PREF_USB_FASTCHARGE:
                 FileUtils.setValue(USB_FASTCHARGE_PATH, (boolean) value);
                 break;
+*/
 
 <<<<<<< HEAD
             case PREF_BACKLIGHT_DIMMER:

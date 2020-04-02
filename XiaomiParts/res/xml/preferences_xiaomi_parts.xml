@@ -153,6 +153,7 @@
 <<<<<<< HEAD
 =======
 
+<!--
     <PreferenceCategory
         android:key="usb_fastcharge"
         android:title="@string/usb_fastcharge_title" >
@@ -163,5 +164,9 @@
             android:icon="@drawable/ic_usb_fastcharge"
             android:summary="@string/fastcharge_summary" />
     </PreferenceCategory>
+<<<<<<< HEAD
 >>>>>>> c46caf8... mido: XiaomiParts Improvements
+=======
+-->
+>>>>>>> ab3b7cc... mido: XiaomiParts: Disable USB Fastcharge toggle
 </PreferenceScreen>
