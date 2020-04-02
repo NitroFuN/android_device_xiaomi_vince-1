@@ -176,6 +176,9 @@ PRODUCT_BOOT_JARS += \
 
 # XiaomiParts
 PRODUCT_PACKAGES += \
+<<<<<<< HEAD
+>>>>>>> 12c8c1a... mido: Import XiaomiParts v2.0
+=======
 >>>>>>> 12c8c1a... mido: Import XiaomiParts v2.0
     XiaomiParts
 >>>>>>> 12c8c1a0... mido: Import XiaomiParts v2.0

@@ -27,7 +27,11 @@ import com.xiaomi.parts.kcal.KCalSettingsActivity;
 import com.xiaomi.parts.preferences.SecureSettingCustomSeekBarPreference;
 import com.xiaomi.parts.preferences.SecureSettingListPreference;
 import com.xiaomi.parts.preferences.SecureSettingSwitchPreference;
+<<<<<<< HEAD
 import com.xiaomi.parts.preferences.VibratorStrengthPreference;
+=======
+import com.xiaomi.parts.preferences.VibrationSeekBarPreference;
+>>>>>>> 3860be5... XiaomiParts: Add USB fastcharge switch
 
 public class DeviceSettings extends PreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -35,6 +39,9 @@ public class DeviceSettings extends PreferenceFragment implements
 
     final static String PREF_TORCH_BRIGHTNESS = "torch_brightness";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3860be5... XiaomiParts: Add USB fastcharge switch
     private final static String TORCH_1_BRIGHTNESS_PATH = "/sys/devices/soc/800f000.qcom," +
             "spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_0/max_brightness";
     private final static String TORCH_2_BRIGHTNESS_PATH = "/sys/devices/soc/800f000.qcom," +
@@ -67,6 +74,7 @@ public class DeviceSettings extends PreferenceFragment implements
     private SecureSettingSwitchPreference mEnableHAL3;
     private SecureSettingCustomSeekBarPreference mTorchBrightness;
     private VibrationSeekBarPreference mVibrationStrength;
+<<<<<<< HEAD
 =======
     public static final String TORCH_1_BRIGHTNESS_PATH = "/sys/devices/soc/qpnp-flash-led-25/leds/led:torch_0/max_brightness";
     public static final String TORCH_2_BRIGHTNESS_PATH = "/sys/devices/soc/qpnp-flash-led-25/leds/led:torch_1/max_brightness";
@@ -97,6 +105,8 @@ public class DeviceSettings extends PreferenceFragment implements
     private CustomSeekBarPreference mTorchBrightness;
     private VibratorStrengthPreference mVibratorStrength;
 >>>>>>> d954cf5... Fix some stuff for XiaomiParts
+=======
+>>>>>>> 3860be5... XiaomiParts: Add USB fastcharge switch
     private Preference mKcal;
     private SecureSettingListPreference mSPECTRUM;
     private SecureSettingSwitchPreference mEnableDirac;

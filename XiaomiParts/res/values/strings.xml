@@ -14,12 +14,17 @@
      limitations under the License.
 -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 <resources>
     <string name="advanced_settings">Zenfone Parts</string>
 =======
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="advanced_settings">Xiaomi Parts</string>
 >>>>>>> d954cf5... Fix some stuff for XiaomiParts
+=======
+<resources>
+    <string name="advanced_settings">Zenfone Parts</string>
+>>>>>>> 3860be5... XiaomiParts: Add USB fastcharge switch
     <string name="advanced_settings_summary">Device Specific Customisations</string>
 
     <string name="camera_title">Camera</string>

@@ -14,7 +14,11 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
     package="com.xiaomi.parts"
+=======
+    package="com.asus.zenparts"
+>>>>>>> 3860be5... XiaomiParts: Add USB fastcharge switch
     android:sharedUserId="android.uid.system">
 
     <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
@@ -28,7 +32,10 @@
     <uses-sdk android:minSdkVersion="27" />
 
     <application
+<<<<<<< HEAD
 	tools:replace="android:appComponentFactory"
+=======
+>>>>>>> 3860be5... XiaomiParts: Add USB fastcharge switch
         android:label="@string/advanced_settings"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">

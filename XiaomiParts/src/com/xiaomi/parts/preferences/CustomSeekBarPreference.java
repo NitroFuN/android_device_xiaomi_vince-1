@@ -303,12 +303,16 @@ public class CustomSeekBarPreference extends Preference implements SeekBar.OnSee
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3860be5... XiaomiParts: Add USB fastcharge switch
     @Override
     public void setEnabled(boolean enabled) {
         if (mSeekBar != null && mStatusText != null && mTitle != null) {
             mSeekBar.setEnabled(enabled);
             mStatusText.setEnabled(enabled);
             mTitle.setEnabled(enabled);
+<<<<<<< HEAD
 =======
     public void setMax(int max) {
         mMaxValue = max;
@@ -333,6 +337,8 @@ public class CustomSeekBarPreference extends Preference implements SeekBar.OnSee
             else
                 mValue = newValue;
 >>>>>>> d954cf5... Fix some stuff for XiaomiParts
+=======
+>>>>>>> 3860be5... XiaomiParts: Add USB fastcharge switch
         }
         super.setEnabled(enabled);
     }
