@@ -17,4 +17,23 @@ persist.camera.eis.enable=1
 
 # Havoc maintainer
 PRODUCT_PROPERTY_OVERRIDES += \
+<<<<<<< HEAD
 ro.havoc.maintainer=KenHV
+=======
+<<<<<<< HEAD
+ro.zenx.maintainer=Srinand E K
+=======
+persist.sys.wfd.virtual=0
+
+# Dirac algo tsx 9/12
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.dirac.acs.controller=qem \
+    persist.dirac.acs.storeSettings=1 \
+    persist.dirac.acs.ignore_error=1
+
+# Dirac headset effect
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.audio.soundfx.dirac=true \
+    persist.audio.dirac.speaker=true
+>>>>>>> 52ca038f... mido: Enable Dirac audio effect
+>>>>>>> af3bdd5... Enable Dirac audio effect
