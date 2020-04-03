@@ -15,10 +15,14 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 <<<<<<< HEAD
+<<<<<<< HEAD
     package="com.xiaomi.parts"
 =======
     package="com.asus.zenparts"
 >>>>>>> 3860be5... XiaomiParts: Add USB fastcharge switch
+=======
+    package="com.xiaomi.parts"
+>>>>>>> c6225e6...  Fix some stuff for XiaomiParts
     android:sharedUserId="android.uid.system">
 
     <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />

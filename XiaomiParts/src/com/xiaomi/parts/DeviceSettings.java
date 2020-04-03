@@ -29,10 +29,14 @@ import com.xiaomi.parts.preferences.CustomSeekBarPreference;
 import com.xiaomi.parts.preferences.SecureSettingListPreference;
 import com.xiaomi.parts.preferences.SecureSettingSwitchPreference;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import com.xiaomi.parts.preferences.VibratorStrengthPreference;
 =======
 import com.xiaomi.parts.preferences.VibrationSeekBarPreference;
 >>>>>>> 3860be5... XiaomiParts: Add USB fastcharge switch
+=======
+import com.xiaomi.parts.preferences.VibratorStrengthPreference;
+>>>>>>> c6225e6...  Fix some stuff for XiaomiParts
 
 public class DeviceSettings extends PreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -41,12 +45,19 @@ public class DeviceSettings extends PreferenceFragment implements
     final static String PREF_TORCH_BRIGHTNESS = "torch_brightness";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3860be5... XiaomiParts: Add USB fastcharge switch
+=======
+>>>>>>> c6225e6...  Fix some stuff for XiaomiParts
     private final static String TORCH_1_BRIGHTNESS_PATH = "/sys/devices/soc/800f000.qcom," +
             "spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_0/max_brightness";
     private final static String TORCH_2_BRIGHTNESS_PATH = "/sys/devices/soc/800f000.qcom," +
             "spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_1/max_brightness";
+=======
+    public static final String TORCH_1_BRIGHTNESS_PATH = "/sys/devices/soc/qpnp-flash-led-25/leds/led:torch_0/max_brightness";
+    public static final String TORCH_2_BRIGHTNESS_PATH = "/sys/devices/soc/qpnp-flash-led-25/leds/led:torch_1/max_brightness";
+>>>>>>> d954cf5... Fix some stuff for XiaomiParts
 
 <<<<<<< HEAD
     final static String PREF_VIBRATION_STRENGTH = "vibration_strength";
@@ -65,9 +76,15 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String PREF_BACKLIGHT_DIMMER = "backlight_dimmer";
     public static final String BACKLIGHT_DIMMER_PATH = "/sys/module/mdss_fb/parameters/backlight_dimmer";
 
+<<<<<<< HEAD
     public static final String PREF_ENABLE_HAL3 = "hal3";
     public static final String HAL3_SYSTEM_PROPERTY = "persist.camera.HAL3.enabled";
 >>>>>>> 99bad28... mido: XiaomiParts: Add Backlight Dimmer toggle
+=======
+    public static final String KEY_VIBSTRENGTH = "vib_strength";
+    public static final String CATEGORY_DISPLAY = "display";
+    public static final String PREF_DEVICE_KCAL = "device_kcal";
+>>>>>>> d954cf5... Fix some stuff for XiaomiParts
 
     private static final String PREF_ENABLE_HAL3 = "hal3";
     private static final String HAL3_SYSTEM_PROPERTY = "persist.camera.HAL3.enabled";

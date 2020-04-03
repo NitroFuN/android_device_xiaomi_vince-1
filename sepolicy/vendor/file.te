@@ -22,10 +22,14 @@ type proc_touchpanel, fs_type, sysfs_type, proc_type;
 # FPS Info
 type sysfs_fps, sysfs_type, fs_type;
 <<<<<<< HEAD
+<<<<<<< HEAD
 type sysfs_info, sysfs_type, fs_type;
 =======
 type sysfs_type, fs_type;
 >>>>>>> 0c636c2... Label nodes for XiaomiParts
+=======
+type sysfs_info, sysfs_type, fs_type;
+>>>>>>> d954cf5... Fix some stuff for XiaomiParts
 
 # XiaomiParts
 type kcal_dev, sysfs_type, fs_type;

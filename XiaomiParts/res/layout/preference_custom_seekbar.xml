@@ -35,7 +35,6 @@
 >>>>>>> 3860be5... XiaomiParts: Add USB fastcharge switch
 =======
     android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
-    android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
     android:background="?android:attr/activatedBackgroundIndicator"
     android:clipToPadding="false">
 >>>>>>> 2695abd... XiaomiParts:: Implement New CustomSeekBar
