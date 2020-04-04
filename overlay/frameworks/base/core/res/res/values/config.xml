@@ -27,7 +27,6 @@
          during initialization when the setting is still null. -->
     <bool name="config_dozeAlwaysOnEnabled">false</bool>
 
-<<<<<<< HEAD
     <!-- Whether device ignores the RSSNR signal implementation -->
     <bool name="config_ignoreRssnrSignalLevel">true</bool>
         <!-- Keycodes of gestures. If the gesture is not supported set it to 0. -->
@@ -47,21 +46,6 @@
 
     <!-- Whether to intercept inputs on screen off. -->
     <bool name="config_enableKeyHandler">true</bool>
-=======
-    <!-- Power Management: Specifies whether to decouple the auto-suspend state of the
-         device from the display on/off state.
-         When false, setInteractive(..., true) will be called before the display is turned on
-         and setInteractive(..., false) will be called after the display is turned off.
-         This mode provides best compatibility for devices that expect the interactive
-         state to be tied to the display state.
-         When true, setInteractive(...) will be called independently of whether the display
-         is being turned on or off.  This mode enables the power manager to reduce
-         clocks and disable the touch controller while the display is on.
-         This resource should be set to "true" when a doze component has been specified
-         to maximize power savings but not all devices support it.
-         Refer to power.h for details.
-    -->
-    <bool name="config_powerDecoupleInteractiveModeFromDisplay">false</bool>
 
     <!-- Screen brightness used to dim the screen while dozing in a very low power state.
          May be less than the minimum allowed brightness setting
@@ -220,25 +204,9 @@
     <bool name="config_button_brightness_support">true</bool>
 
     <!-- Whether to post reset runnable for all clients. Needed for some older
-         vendor fingerprint HAL implementations. -->
-    <bool name="config_fingerprintPostResetRunnableForAllClients">true</bool>
-
-    <!-- The component name, flattened to a string, for the default autofill service
-         to  enabled for an user. This service must be trusted, as it can be activated
-         without explicit consent of the user. If no autofill service with the
-          specified name exists on the device, autofill will be disabled by default.
-    -->
-    <string name="config_defaultAutofillService" translatable="false">com.google.android.gms/.autofill.service.AutofillService</string>
-
-    <!-- Sets the paths that are needed for SystemInfo-->
-    <string name="config_cpu_temp_path" translatable="false">/sys/class/thermal/thermal_zone0/temp</string>
-    <string name="config_battery_temp_path" translatable="false">sys/class/power_supply/battery/temp</string>
-    <string name="config_gpu_clock_path" translatable="false">/sys/kernel/gpu/gpu_clock</string>
-    <string name="config_gpu_busy_path" translatable="false">/sys/kernel/gpu/gpu_busy</string>
-    <string name="config_battery_level_path" translatable="false">/sys/class/power_supply/battery/capacity</string>
-
+         vendor fingerprint HAL implementati
     <!-- Add Xiaomiparts To ZenHub-->
     <string name="config_device_parts_package_name" translatable="false">com.xiaomi.parts</string>
     <string name="config_device_parts_package_activity" translatable="false">com.xiaomi.parts.DeviceSettingsActivity</string>
->>>>>>> 394428f4... mido : Add Xiaomi Parts To ZenHub
+
 </resources>
