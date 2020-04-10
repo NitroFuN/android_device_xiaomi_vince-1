@@ -197,6 +197,7 @@
     <string name="quick_settings_log_tile_label">LogTile</string>
     <string name="quick_settings_log_tile_dialog_title">Options</string>
     <string name="cannot_get_su">Action failed because of missing superuser access</string>
+<<<<<<< HEAD
 
     <!-- FPS Info -->
     <string name="fps_info_title">FPS Info Overlay</string>
@@ -358,5 +359,11 @@
     <string name="tcpcongestion_bic">bic</string>
     <string name="tcpcongestion_highspeed">highspeed</string>
     <string name="tcpcongestion_htcp">htcp</string>
+<<<<<<< HEAD
 >>>>>>> e1339fb... mido: XiaomiParts: Add TCP Congestion Algorithm
+=======
+
+=======
+>>>>>>> e363686... mido: XiaomiParts: Add LogTile
+>>>>>>> 20bf2aa... XiaomiParts: Add LogTile
 </resources>

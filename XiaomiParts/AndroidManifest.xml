@@ -117,6 +117,10 @@
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+=======
+>>>>>>> e363686... mido: XiaomiParts: Add LogTile
+>>>>>>> 20bf2aa... XiaomiParts: Add LogTile
         <service
             android:name="com.xiaomi.parts.LogTile"
             android:icon="@drawable/ic_qs_log"
@@ -127,6 +131,7 @@
                     android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
+<<<<<<< HEAD
         <service
             android:name=".SpectrumTileService" 
             android:icon="@drawable/ic_spectrum" 
@@ -177,7 +182,14 @@
                 <action android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
+<<<<<<< HEAD
 
 >>>>>>> 4261289... mido: XiaomiParts: Add GPU and CPU Boost QS Tiles
     </application>
+=======
+   </application>
+=======
+    </application>
+>>>>>>> e363686... mido: XiaomiParts: Add LogTile
+>>>>>>> 20bf2aa... XiaomiParts: Add LogTile
 </manifest>
