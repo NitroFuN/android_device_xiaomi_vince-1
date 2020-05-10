@@ -105,6 +105,8 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String MICROPHONE_GAIN_PATH = "/sys/kernel/sound_control/mic_gain";
     public static final String PREF_EARPIECE_GAIN = "earpiece_gain";
     public static final String EARPIECE_GAIN_PATH = "/sys/kernel/sound_control/earpiece_gain";
+    public static final String PREF_SPEAKER_GAIN = "speaker_gain";
+    public static final String SPEAKER_GAIN_PATH = "/sys/kernel/sound_control/speaker_gain";
     public static final String CATEGORY_FASTCHARGE = "usb_fastcharge";
 <<<<<<< HEAD
     public static final String PREF_USB_FASTCHARGE = "fastcharge";
@@ -177,6 +179,7 @@ public class DeviceSettings extends PreferenceFragment implements
     private CustomSeekBarPreference mMicrophoneGain;
     private CustomSeekBarPreference mEarpieceGain;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private SecureSettingSwitchPreference mFastcharge;
 <<<<<<< HEAD
 >>>>>>> e3cd0f3... mido: XiaomiParts:: Implement New CustomSeekBar
@@ -184,6 +187,9 @@ public class DeviceSettings extends PreferenceFragment implements
 =======
 >>>>>>> 0c9feb4... mido: XiaomiParts: Add Earpiece Gain
 =======
+=======
+    private CustomSeekBarPreference mSpeakerGain;
+>>>>>>> 82e3f4e... mido: XiaomiParts: Add Speaker Gain
     //private SecureSettingSwitchPreference mFastcharge;
 >>>>>>> ab3b7cc... mido: XiaomiParts: Disable USB Fastcharge toggle
     private SecureSettingSwitchPreference mBacklightDimmer;
@@ -267,6 +273,8 @@ public class DeviceSettings extends PreferenceFragment implements
         mEarpieceGain = (CustomSeekBarPreference) findPreference(PREF_EARPIECE_GAIN);
         mEarpieceGain.setOnPreferenceChangeListener(this);
 
+        mSpeakerGain = (CustomSeekBarPreference) findPreference(PREF_SPEAKER_GAIN);
+        mSpeakerGain.setOnPreferenceChangeListener(this);
 /*
         if (FileUtils.fileWritable(USB_FASTCHARGE_PATH)) {
             mFastcharge = (SecureSettingSwitchPreference) findPreference(PREF_USB_FASTCHARGE);
@@ -346,8 +354,14 @@ public class DeviceSettings extends PreferenceFragment implements
                 break;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0c9feb4... mido: XiaomiParts: Add Earpiece Gain
 =======
+=======
+            case PREF_SPEAKER_GAIN:
+                 FileUtils.setValue(SPEAKER_GAIN_PATH, (int) value);
+                break;
+>>>>>>> 82e3f4e... mido: XiaomiParts: Add Speaker Gain
 /*
 >>>>>>> ab3b7cc... mido: XiaomiParts: Disable USB Fastcharge toggle
             case PREF_USB_FASTCHARGE:
