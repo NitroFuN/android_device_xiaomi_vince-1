@@ -99,10 +99,15 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
 =======
         FileUtils.setValue(DeviceSettings.SPEAKER_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_SPEAKER_GAIN, 0));
+<<<<<<< HEAD
 >>>>>>> 82e3f4e... mido: XiaomiParts: Add Speaker Gain
        // FileUtils.setValue(DeviceSettings.USB_FASTCHARGE_PATH, Settings.Secure.getInt(context.getContentResolver(),
        //         DeviceSettings.PREF_USB_FASTCHARGE, 0));
 >>>>>>> ab3b7cc... mido: XiaomiParts: Disable USB Fastcharge toggle
+=======
+        FileUtils.setValue(DeviceSettings.USB_FASTCHARGE_PATH, Settings.Secure.getInt(context.getContentResolver(),
+                DeviceSettings.PREF_USB_FASTCHARGE, 0));
+>>>>>>> 1448afb... Revert "mido: XiaomiParts: Disable USB Fastcharge toggle"
         context.startService(new Intent(context, DiracService.class));
     }
 }
