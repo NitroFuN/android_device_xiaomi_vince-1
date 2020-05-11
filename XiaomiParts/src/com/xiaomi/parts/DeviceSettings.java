@@ -133,7 +133,11 @@ public class DeviceSettings extends PreferenceFragment implements
 =======
     public static final String PREF_USB_FASTCHARGE = "fastcharge";
     public static final String USB_FASTCHARGE_PATH = "/sys/kernel/fast_charge/force_fast_charge";
+<<<<<<< HEAD
 >>>>>>> 1448afb... Revert "mido: XiaomiParts: Disable USB Fastcharge toggle"
+=======
+    public static final String PREF_KEY_FPS_INFO = "fps_info";
+>>>>>>> 494253b... mido: XiaomiParts: Add FPS info
 =======
     public static final String PREF_KEY_FPS_INFO = "fps_info";
 >>>>>>> 494253b... mido: XiaomiParts: Add FPS info
@@ -306,6 +310,7 @@ public class DeviceSettings extends PreferenceFragment implements
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0c9feb4... mido: XiaomiParts: Add Earpiece Gain
 =======
 */
@@ -313,10 +318,15 @@ public class DeviceSettings extends PreferenceFragment implements
 =======
 >>>>>>> 1448afb... Revert "mido: XiaomiParts: Disable USB Fastcharge toggle"
 =======
+=======
+>>>>>>> 494253b... mido: XiaomiParts: Add FPS info
 
         SwitchPreference fpsInfo = (SwitchPreference) findPreference(PREF_KEY_FPS_INFO);
         fpsInfo.setChecked(prefs.getBoolean(PREF_KEY_FPS_INFO, false));
         fpsInfo.setOnPreferenceChangeListener(this);
+<<<<<<< HEAD
+>>>>>>> 494253b... mido: XiaomiParts: Add FPS info
+=======
 >>>>>>> 494253b... mido: XiaomiParts: Add FPS info
     }
 
@@ -404,6 +414,7 @@ public class DeviceSettings extends PreferenceFragment implements
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             case PREF_BACKLIGHT_DIMMER:
                 FileUtils.setValue(BACKLIGHT_DIMMER_PATH, (boolean) value);
                 break;
@@ -412,6 +423,8 @@ public class DeviceSettings extends PreferenceFragment implements
 =======
 >>>>>>> cd02f85... mido: XiaomiParts: Backlight Dimmer improvement
 =======
+=======
+>>>>>>> 494253b... mido: XiaomiParts: Add FPS info
             case PREF_KEY_FPS_INFO:
                 boolean enabled = (Boolean) value;
                 Intent fpsinfo = new Intent(this.getContext(), FPSInfoService.class);
@@ -421,6 +434,9 @@ public class DeviceSettings extends PreferenceFragment implements
                     this.getContext().stopService(fpsinfo);
                 }
                 break;
+<<<<<<< HEAD
+>>>>>>> 494253b... mido: XiaomiParts: Add FPS info
+=======
 >>>>>>> 494253b... mido: XiaomiParts: Add FPS info
             default:
                 break;

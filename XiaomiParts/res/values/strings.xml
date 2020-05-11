@@ -190,5 +190,8 @@
     <!-- FPS Info -->
     <string name="fps_info_title">FPS Info Overlay</string>
     <string name="fps_info_summary">Show overlay with current frames per second</string>
+<<<<<<< HEAD
+>>>>>>> 494253b... mido: XiaomiParts: Add FPS info
+=======
 >>>>>>> 494253b... mido: XiaomiParts: Add FPS info
 </resources>

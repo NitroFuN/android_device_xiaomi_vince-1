@@ -138,6 +138,9 @@
                     android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
+<<<<<<< HEAD
+>>>>>>> 494253b... mido: XiaomiParts: Add FPS info
+=======
 >>>>>>> 494253b... mido: XiaomiParts: Add FPS info
     </application>
 </manifest>
