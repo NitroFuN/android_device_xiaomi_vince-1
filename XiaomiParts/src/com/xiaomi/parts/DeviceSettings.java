@@ -18,9 +18,13 @@ package com.xiaomi.parts;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import androidx.preference.PreferenceFragment;
+import androidx.preference.PreferenceManager;
+import androidx.preference.SwitchPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 
@@ -112,6 +116,7 @@ public class DeviceSettings extends PreferenceFragment implements
 <<<<<<< HEAD
     public static final String PREF_USB_FASTCHARGE = "fastcharge";
     public static final String USB_FASTCHARGE_PATH = "/sys/kernel/fast_charge/force_fast_charge";
+<<<<<<< HEAD
 >>>>>>> 0c9feb4... mido: XiaomiParts: Add Earpiece Gain
 
     private static final String PREF_ENABLE_DIRAC = "dirac_enabled";
@@ -129,6 +134,9 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String PREF_USB_FASTCHARGE = "fastcharge";
     public static final String USB_FASTCHARGE_PATH = "/sys/kernel/fast_charge/force_fast_charge";
 >>>>>>> 1448afb... Revert "mido: XiaomiParts: Disable USB Fastcharge toggle"
+=======
+    public static final String PREF_KEY_FPS_INFO = "fps_info";
+>>>>>>> 494253b... mido: XiaomiParts: Add FPS info
 
     private SecureSettingSwitchPreference mEnableHAL3;
 <<<<<<< HEAD
@@ -202,10 +210,13 @@ public class DeviceSettings extends PreferenceFragment implements
     private SecureSettingSwitchPreference mFastcharge;
 >>>>>>> 1448afb... Revert "mido: XiaomiParts: Disable USB Fastcharge toggle"
     private SecureSettingSwitchPreference mBacklightDimmer;
+    private static Context mContext;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.preferences_xiaomi_parts, rootKey);
+        mContext = this.getContext();
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(mContext);
 
         String device = FileUtils.getStringProp("ro.build.product", "unknown");
 
@@ -294,12 +305,19 @@ public class DeviceSettings extends PreferenceFragment implements
         }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0c9feb4... mido: XiaomiParts: Add Earpiece Gain
 =======
 */
 >>>>>>> ab3b7cc... mido: XiaomiParts: Disable USB Fastcharge toggle
 =======
 >>>>>>> 1448afb... Revert "mido: XiaomiParts: Disable USB Fastcharge toggle"
+=======
+
+        SwitchPreference fpsInfo = (SwitchPreference) findPreference(PREF_KEY_FPS_INFO);
+        fpsInfo.setChecked(prefs.getBoolean(PREF_KEY_FPS_INFO, false));
+        fpsInfo.setOnPreferenceChangeListener(this);
+>>>>>>> 494253b... mido: XiaomiParts: Add FPS info
     }
 
 
@@ -385,6 +403,7 @@ public class DeviceSettings extends PreferenceFragment implements
                 break;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             case PREF_BACKLIGHT_DIMMER:
                 FileUtils.setValue(BACKLIGHT_DIMMER_PATH, (boolean) value);
                 break;
@@ -392,6 +411,17 @@ public class DeviceSettings extends PreferenceFragment implements
 >>>>>>> 99bad28... mido: XiaomiParts: Add Backlight Dimmer toggle
 =======
 >>>>>>> cd02f85... mido: XiaomiParts: Backlight Dimmer improvement
+=======
+            case PREF_KEY_FPS_INFO:
+                boolean enabled = (Boolean) value;
+                Intent fpsinfo = new Intent(this.getContext(), FPSInfoService.class);
+                if (enabled) {
+                    this.getContext().startService(fpsinfo);
+                } else {
+                    this.getContext().stopService(fpsinfo);
+                }
+                break;
+>>>>>>> 494253b... mido: XiaomiParts: Add FPS info
             default:
                 break;
         }

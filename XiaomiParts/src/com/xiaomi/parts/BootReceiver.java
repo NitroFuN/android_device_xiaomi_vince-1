@@ -19,6 +19,8 @@ package com.xiaomi.parts;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import androidx.preference.PreferenceManager;
 import android.provider.Settings;
 import com.xiaomi.parts.preferences.VibratorStrengthPreference;
 
@@ -39,6 +41,7 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
 
     public void onReceive(Context context, Intent intent) {
 
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
 
         FileUtils.setValue(DeviceSettings.BACKLIGHT_DIMMER_PATH, Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_BACKLIGHT_DIMMER, 0));
@@ -109,5 +112,10 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
                 DeviceSettings.PREF_USB_FASTCHARGE, 0));
 >>>>>>> 1448afb... Revert "mido: XiaomiParts: Disable USB Fastcharge toggle"
         context.startService(new Intent(context, DiracService.class));
+
+        boolean enabled = sharedPrefs.getBoolean(DeviceSettings.PREF_KEY_FPS_INFO, false);
+        if (enabled) {
+            context.startService(new Intent(context, FPSInfoService.class));
+        }
     }
 }
