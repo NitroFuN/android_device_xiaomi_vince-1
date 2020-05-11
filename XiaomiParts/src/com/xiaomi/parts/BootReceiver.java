@@ -25,6 +25,7 @@ import android.provider.Settings;
 import com.xiaomi.parts.preferences.VibratorStrengthPreference;
 
 import com.xiaomi.parts.kcal.Utils;
+import com.xiaomi.parts.ambient.SensorsDozeService;
 
 public class BootReceiver extends BroadcastReceiver implements Utils {
 
@@ -110,8 +111,15 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
 =======
         FileUtils.setValue(DeviceSettings.USB_FASTCHARGE_PATH, Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_USB_FASTCHARGE, 0));
+<<<<<<< HEAD
 >>>>>>> 1448afb... Revert "mido: XiaomiParts: Disable USB Fastcharge toggle"
+=======
+        // Dirac
+>>>>>>> a2e2ce2... mido: XiaomiParts: Add Ambient Display Gestures
         context.startService(new Intent(context, DiracService.class));
+
+       // Ambient
+        context.startService(new Intent(context, SensorsDozeService.class));
 
         boolean enabled = sharedPrefs.getBoolean(DeviceSettings.PREF_KEY_FPS_INFO, false);
         if (enabled) {
