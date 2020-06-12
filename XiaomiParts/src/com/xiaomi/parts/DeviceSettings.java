@@ -41,7 +41,12 @@ import com.xiaomi.parts.preferences.VibrationSeekBarPreference;
 >>>>>>> 3860be5... XiaomiParts: Add USB fastcharge switch
 =======
 import com.xiaomi.parts.preferences.VibratorStrengthPreference;
+<<<<<<< HEAD
 >>>>>>> c6225e6...  Fix some stuff for XiaomiParts
+=======
+import com.xiaomi.parts.preferences.VibratorCallStrengthPreference;
+import com.xiaomi.parts.preferences.VibratorNotifStrengthPreference;
+>>>>>>> b181f5b... XiaomiParts: Add new Vibration Control
 
 public class DeviceSettings extends PreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -82,11 +87,18 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String BACKLIGHT_DIMMER_PATH = "/sys/module/mdss_fb/parameters/backlight_dimmer";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static final String PREF_ENABLE_HAL3 = "hal3";
     public static final String HAL3_SYSTEM_PROPERTY = "persist.camera.HAL3.enabled";
 >>>>>>> 99bad28... mido: XiaomiParts: Add Backlight Dimmer toggle
 =======
     public static final String KEY_VIBSTRENGTH = "vib_strength";
+=======
+    public static final String KEY_VIBSTRENGTH = "vib_strength";    
+    public static final String KEY_CALL_VIBSTRENGTH = "vib_call_strength";
+    public static final String KEY_NOTIF_VIBSTRENGTH = "vib_notif_strength";
+    
+>>>>>>> 9b83574... XiaomiParts: Add new Vibration Control
     public static final String CATEGORY_DISPLAY = "display";
     public static final String PREF_DEVICE_KCAL = "device_kcal";
 >>>>>>> d954cf5... Fix some stuff for XiaomiParts
@@ -183,7 +195,12 @@ public class DeviceSettings extends PreferenceFragment implements
 =======
     private CustomSeekBarPreference mTorchBrightness;
     private VibratorStrengthPreference mVibratorStrength;
+<<<<<<< HEAD
 >>>>>>> 2695abd... XiaomiParts:: Implement New CustomSeekBar
+=======
+    private VibratorCallStrengthPreference mVibratorCallStrength;
+    private VibratorNotifStrengthPreference mVibratorNotifStrength;
+>>>>>>> b181f5b... XiaomiParts: Add new Vibration Control
     private Preference mKcal;
     private SecureSettingListPreference mSPECTRUM;
     private Preference mAmbientPref;
@@ -269,10 +286,15 @@ public class DeviceSettings extends PreferenceFragment implements
             getPreferenceScreen().removePreference(findPreference(PREF_BACKLIGHT_DIMMER));
         }
 
-        mVibratorStrength = (VibratorStrengthPreference) findPreference(KEY_VIBSTRENGTH);
-        if (mVibratorStrength != null) {
+	mVibratorStrength = (VibratorStrengthPreference) findPreference(KEY_VIBSTRENGTH);
+        if (mVibratorStrength != null)
             mVibratorStrength.setEnabled(VibratorStrengthPreference.isSupported());
-        }
+        mVibratorCallStrength = (VibratorCallStrengthPreference) findPreference(KEY_CALL_VIBSTRENGTH);
+        if (mVibratorCallStrength != null)
+            mVibratorCallStrength.setEnabled(VibratorCallStrengthPreference.isSupported());
+        mVibratorNotifStrength = (VibratorNotifStrengthPreference) findPreference(KEY_NOTIF_VIBSTRENGTH);
+        if (mVibratorNotifStrength != null)
+            mVibratorNotifStrength.setEnabled(VibratorNotifStrengthPreference.isSupported());
 
         boolean enhancerEnabled;
         try {
