@@ -56,10 +56,13 @@ public class DeviceSettings extends PreferenceFragment implements
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3860be5... XiaomiParts: Add USB fastcharge switch
 =======
 >>>>>>> c6225e6...  Fix some stuff for XiaomiParts
+=======
+>>>>>>> 02a21e0... XiaomiParts: Fix Torch
     private final static String TORCH_1_BRIGHTNESS_PATH = "/sys/devices/soc/800f000.qcom," +
             "spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_0/max_brightness";
     private final static String TORCH_2_BRIGHTNESS_PATH = "/sys/devices/soc/800f000.qcom," +
@@ -83,6 +86,11 @@ public class DeviceSettings extends PreferenceFragment implements
 
 =======
 >>>>>>> e3cd0f3... mido: XiaomiParts:: Implement New CustomSeekBar
+=======
+    public static final String TORCH_1_BRIGHTNESS_PATH = "/sys/class/leds/led:torch_0/max_brightness";
+    public static final String TORCH_2_BRIGHTNESS_PATH = "/sys/class/leds/led:torch_1/max_brightness";
+
+>>>>>>> e4c0ed6... XiaomiParts: Fix Torch
     public static final String PREF_BACKLIGHT_DIMMER = "backlight_dimmer";
     public static final String BACKLIGHT_DIMMER_PATH = "/sys/module/mdss_fb/parameters/backlight_dimmer";
 
