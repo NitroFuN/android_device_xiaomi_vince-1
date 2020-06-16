@@ -117,8 +117,13 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
         FileUtils.setValue(DeviceSettings.USB_FASTCHARGE_PATH, Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_USB_FASTCHARGE, 0));
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 1448afb... Revert "mido: XiaomiParts: Disable USB Fastcharge toggle"
 =======
+=======
+        FileUtils.setValue(DeviceSettings.MSM_TOUCHBOOST_PATH, Settings.Secure.getInt(context.getContentResolver(),
+                DeviceSettings.PREF_MSM_TOUCHBOOST, 0));
+>>>>>>> ba23a0f... mido: XiaomiParts: Add TouchBoost toggles
         // Dirac
 >>>>>>> a2e2ce2... mido: XiaomiParts: Add Ambient Display Gestures
         context.startService(new Intent(context, DiracService.class));

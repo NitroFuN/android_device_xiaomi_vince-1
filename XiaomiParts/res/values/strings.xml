@@ -245,5 +245,13 @@
 
     <!-- Label for feature switch -->
     <string name="switch_bar_off">Off</string>
+<<<<<<< HEAD
 >>>>>>> a2e2ce2... mido: XiaomiParts: Add Ambient Display Gestures
+=======
+
+    <!-- Touchboost -->
+    <string name="Boost_title">Touchboost</string>
+    <string name="Touchboost_title">Enable Touchboost</string>
+    <string name="Touchboost_summary">Boost cpu when touch detected for soomth experience</string>
+>>>>>>> ba23a0f... mido: XiaomiParts: Add TouchBoost toggles
 </resources>

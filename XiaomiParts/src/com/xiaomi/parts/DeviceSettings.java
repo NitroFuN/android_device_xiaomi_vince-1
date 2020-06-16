@@ -163,7 +163,9 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String PREF_KEY_FPS_INFO = "fps_info";
 >>>>>>> 494253b... mido: XiaomiParts: Add FPS info
 
+<<<<<<< HEAD
     private SecureSettingSwitchPreference mEnableHAL3;
+<<<<<<< HEAD
 <<<<<<< HEAD
     private SecureSettingCustomSeekBarPreference mTorchBrightness;
     private VibrationSeekBarPreference mVibrationStrength;
@@ -195,6 +197,14 @@ public class DeviceSettings extends PreferenceFragment implements
     //public static final String PREF_USB_FASTCHARGE = "fastcharge";
     //public static final String USB_FASTCHARGE_PATH = "/sys/kernel/fast_charge/force_fast_charge";
 
+=======
+=======
+    public static final String CATEGORY_TOUCHBOOST = "msm_touchboost";
+    public static final String PREF_MSM_TOUCHBOOST = "touchboost";
+    public static final String MSM_TOUCHBOOST_PATH = "/sys/module/msm_performance/parameters/touchboost";
+
+>>>>>>> ba23a0f... mido: XiaomiParts: Add TouchBoost toggles
+>>>>>>> 30973e7... XiaomiParts: Add TouchBoost toggles
     private CustomSeekBarPreference mTorchBrightness;
     private VibratorStrengthPreference mVibratorStrength;
 >>>>>>> d954cf5... Fix some stuff for XiaomiParts
@@ -241,6 +251,7 @@ public class DeviceSettings extends PreferenceFragment implements
     private SecureSettingSwitchPreference mFastcharge;
 >>>>>>> 1448afb... Revert "mido: XiaomiParts: Disable USB Fastcharge toggle"
     private SecureSettingSwitchPreference mBacklightDimmer;
+    private SecureSettingSwitchPreference mTouchboost;
     private static Context mContext;
 
     @Override
@@ -364,6 +375,14 @@ public class DeviceSettings extends PreferenceFragment implements
 =======
 >>>>>>> 494253b... mido: XiaomiParts: Add FPS info
 
+        if (FileUtils.fileWritable(MSM_TOUCHBOOST_PATH)) {
+            mTouchboost = (SecureSettingSwitchPreference) findPreference(PREF_MSM_TOUCHBOOST);
+            mTouchboost.setChecked(FileUtils.getFileValueAsBoolean(MSM_TOUCHBOOST_PATH, true));
+            mTouchboost.setOnPreferenceChangeListener(this);
+        } else {
+            getPreferenceScreen().removePreference(findPreference(CATEGORY_TOUCHBOOST));
+        }
+
         SwitchPreference fpsInfo = (SwitchPreference) findPreference(PREF_KEY_FPS_INFO);
         fpsInfo.setChecked(prefs.getBoolean(PREF_KEY_FPS_INFO, false));
         fpsInfo.setOnPreferenceChangeListener(this);
@@ -463,6 +482,7 @@ public class DeviceSettings extends PreferenceFragment implements
                 FileUtils.setValue(BACKLIGHT_DIMMER_PATH, (boolean) value);
                 break;
 
+<<<<<<< HEAD
 >>>>>>> 99bad28... mido: XiaomiParts: Add Backlight Dimmer toggle
 =======
 >>>>>>> cd02f85... mido: XiaomiParts: Backlight Dimmer improvement
@@ -471,6 +491,12 @@ public class DeviceSettings extends PreferenceFragment implements
 >>>>>>> 494253b... mido: XiaomiParts: Add FPS info
 =======
 >>>>>>> 8f858c9... mido: XiaomiParts: USB Fastcharge Improvement
+=======
+            case PREF_MSM_TOUCHBOOST:
+                FileUtils.setValue(MSM_TOUCHBOOST_PATH, (boolean) value);
+                break;
+
+>>>>>>> ba23a0f... mido: XiaomiParts: Add TouchBoost toggles
             case PREF_KEY_FPS_INFO:
                 boolean enabled = (Boolean) value;
                 Intent fpsinfo = new Intent(this.getContext(), FPSInfoService.class);
