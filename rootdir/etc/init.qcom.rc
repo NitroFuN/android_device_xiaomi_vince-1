@@ -254,9 +254,22 @@ on boot
 >>>>>>> e4c0ed6... XiaomiParts: Fix Torch
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     # Create vpp directory
     mkdir /mnt/vendor/persist/vpp 0770 media media
 =======
+=======
+    # Yellow light intensity
+    chown system system /sys/devices/soc/qpnp-flash-led-25/driver/qpnp-flash-led-25/leds/led:flash_1/max_brightness
+    chmod 0660 /sys/devices/soc/qpnp-flash-led-25/driver/qpnp-flash-led-25/leds/led:flash_1/max_brightness
+
+    # SmartCharging
+    chown system system /sys/class/power_supply/battery/charging_enabled
+    chmod 0666 /sys/class/power_supply/battery/charging_enabled
+    chown system system /sys/class/power_supply/battery/input_suspend
+    chmod 0666 /sys/class/power_supply/battery/input_suspend
+
+>>>>>>> c0d2c3e... mido: XiaomiParts: Camera Flash Yellow Light Intensity Controller
     # Vibration
     chown system system /sys/devices/virtual/timed_output/vibrator/vtg_level
     chmod 0660 /sys/devices/virtual/timed_output/vibrator/vtg_level

@@ -46,7 +46,11 @@ import com.xiaomi.parts.preferences.VibratorStrengthPreference;
 =======
 import com.xiaomi.parts.preferences.VibratorCallStrengthPreference;
 import com.xiaomi.parts.preferences.VibratorNotifStrengthPreference;
+<<<<<<< HEAD
 >>>>>>> b181f5b... XiaomiParts: Add new Vibration Control
+=======
+import com.xiaomi.parts.preferences.YellowFlashPreference;
+>>>>>>> 614130e... XiaomiParts: Camera Flash Yellow Light Intensity Controller
 
 public class DeviceSettings extends PreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -202,6 +206,7 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String CATEGORY_TOUCHBOOST = "msm_touchboost";
     public static final String PREF_MSM_TOUCHBOOST = "touchboost";
     public static final String MSM_TOUCHBOOST_PATH = "/sys/module/msm_performance/parameters/touchboost";
+    public static final String KEY_FLASH = "yellow_flash";
 
 <<<<<<< HEAD
 >>>>>>> ba23a0f... mido: XiaomiParts: Add TouchBoost toggles
@@ -223,6 +228,7 @@ public class DeviceSettings extends PreferenceFragment implements
 >>>>>>> c6f87a8... mido: XiaomiParts: Add GPU Boost Controler
 >>>>>>> 0fe3911... XiaomiParts: Add GPU Boost Controller
     private CustomSeekBarPreference mTorchBrightness;
+    private YellowFlashPreference mYellowFlash;
     private VibratorStrengthPreference mVibratorStrength;
 <<<<<<< HEAD
 >>>>>>> 2695abd... XiaomiParts:: Implement New CustomSeekBar
@@ -406,6 +412,11 @@ public class DeviceSettings extends PreferenceFragment implements
         mCPUBOOST.setValue(FileUtils.getStringProp(CPUBOOST_SYSTEM_PROPERTY, "0"));
         mCPUBOOST.setSummary(mCPUBOOST.getEntry());
         mCPUBOOST.setOnPreferenceChangeListener(this);
+
+        mYellowFlash = (YellowFlashPreference) findPreference(KEY_FLASH);
+        if (mYellowFlash != null) {
+            mYellowFlash.setEnabled(YellowFlashPreference.isSupported());
+        }
 
         SwitchPreference fpsInfo = (SwitchPreference) findPreference(PREF_KEY_FPS_INFO);
         fpsInfo.setChecked(prefs.getBoolean(PREF_KEY_FPS_INFO, false));
