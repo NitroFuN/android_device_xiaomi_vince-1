@@ -377,8 +377,9 @@ public class DeviceSettings extends PreferenceFragment implements
 
         if (FileUtils.fileWritable(MSM_TOUCHBOOST_PATH)) {
             mTouchboost = (SecureSettingSwitchPreference) findPreference(PREF_MSM_TOUCHBOOST);
-            mTouchboost.setChecked(FileUtils.getFileValueAsBoolean(MSM_TOUCHBOOST_PATH, true));
-            mTouchboost.setOnPreferenceChangeListener(this);
+            mTouchboost.setEnabled(Touchboost.isSupported());
+            mTouchboost.setChecked(Touchboost.isCurrentlyEnabled(this.getContext()));
+            mTouchboost.setOnPreferenceChangeListener(new Touchboost(getContext()));
         } else {
             getPreferenceScreen().removePreference(findPreference(CATEGORY_TOUCHBOOST));
         }
@@ -483,6 +484,7 @@ public class DeviceSettings extends PreferenceFragment implements
                 break;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99bad28... mido: XiaomiParts: Add Backlight Dimmer toggle
 =======
 >>>>>>> cd02f85... mido: XiaomiParts: Backlight Dimmer improvement
@@ -497,6 +499,8 @@ public class DeviceSettings extends PreferenceFragment implements
                 break;
 
 >>>>>>> ba23a0f... mido: XiaomiParts: Add TouchBoost toggles
+=======
+>>>>>>> c094bfb... mido: XiaomiParts: TouchBoost Improvements
             case PREF_KEY_FPS_INFO:
                 boolean enabled = (Boolean) value;
                 Intent fpsinfo = new Intent(this.getContext(), FPSInfoService.class);
