@@ -35,6 +35,10 @@ import com.xiaomi.parts.preferences.SecureSettingListPreference;
 import com.xiaomi.parts.preferences.SecureSettingSwitchPreference;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import com.xiaomi.parts.preferences.LedBlinkPreference;
+>>>>>>> 39816f5... XiaomiParts: add Charging LED Blinking Intensity
 import com.xiaomi.parts.preferences.VibratorStrengthPreference;
 =======
 import com.xiaomi.parts.preferences.VibrationSeekBarPreference;
@@ -94,7 +98,14 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String TORCH_1_BRIGHTNESS_PATH = "/sys/class/leds/led:torch_0/max_brightness";
     public static final String TORCH_2_BRIGHTNESS_PATH = "/sys/class/leds/led:torch_1/max_brightness";
 
+<<<<<<< HEAD
 >>>>>>> e4c0ed6... XiaomiParts: Fix Torch
+=======
+    public static final String PREF_CHARGING_LED = "charging_led";
+    public static final String CHARGING_LED_PATH = "/sys/devices/soc/leds-atc-25" +
+            "/driver/leds-atc-25/leds/charging/max_brightness";
+
+>>>>>>> 4c1e9aa... mido: XiaomiParts: add Charging LED Blinking Intensity
     public static final String PREF_BACKLIGHT_DIMMER = "backlight_dimmer";
     public static final String BACKLIGHT_DIMMER_PATH = "/sys/module/mdss_fb/parameters/backlight_dimmer";
 
@@ -231,6 +242,7 @@ public class DeviceSettings extends PreferenceFragment implements
 >>>>>>> c6f87a8... mido: XiaomiParts: Add GPU Boost Controler
 >>>>>>> 0fe3911... XiaomiParts: Add GPU Boost Controller
     private CustomSeekBarPreference mTorchBrightness;
+    private LedBlinkPreference mLedBlink;
     private YellowFlashPreference mYellowFlash;
     private VibratorStrengthPreference mVibratorStrength;
 <<<<<<< HEAD
@@ -419,6 +431,11 @@ public class DeviceSettings extends PreferenceFragment implements
         mYellowFlash = (YellowFlashPreference) findPreference(KEY_FLASH);
         if (mYellowFlash != null) {
             mYellowFlash.setEnabled(YellowFlashPreference.isSupported());
+        }
+
+        mLedBlink = (LedBlinkPreference) findPreference(PREF_CHARGING_LED);
+        if (mLedBlink != null) {
+            mLedBlink.setEnabled(LedBlinkPreference.isSupported());
         }
 
         SwitchPreference fpsInfo = (SwitchPreference) findPreference(PREF_KEY_FPS_INFO);

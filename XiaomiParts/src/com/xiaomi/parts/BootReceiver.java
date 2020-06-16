@@ -23,6 +23,7 @@ import android.content.SharedPreferences;
 import androidx.preference.PreferenceManager;
 import android.provider.Settings;
 import android.text.TextUtils;
+import com.xiaomi.parts.preferences.LedBlinkPreference;
 import com.xiaomi.parts.preferences.VibratorStrengthPreference;
 import com.xiaomi.parts.preferences.VibratorCallStrengthPreference;
 import com.xiaomi.parts.preferences.VibratorNotifStrengthPreference;
@@ -75,6 +76,7 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
                     PREF_CONTRAST, CONTRAST_DEFAULT) + CONTRAST_OFFSET);
             FileUtils.setValue(KCAL_HUE, Settings.Secure.getInt(context.getContentResolver(),
                     PREF_HUE, HUE_DEFAULT));
+            LedBlinkPreference.restore(context);
             VibratorStrengthPreference.restore(context);
 	    VibratorCallStrengthPreference.restore(context);
 	    VibratorNotifStrengthPreference.restore(context);

@@ -289,5 +289,12 @@
     <string name="cpuboost_medium">Medium</string>
     <string name="cpuboost_low">Low</string>
     <string name="cpuboost_disable">Disable</string>
+<<<<<<< HEAD
 >>>>>>> 6544015... mido: XiaomiParts: Add CPU Boost profile
+=======
+
+    <!-- LED Brightness -->
+    <string name="chargingled_title">Charging LED</string>
+    <string name="led_blinking_title">Blinking Intensity</string>
+>>>>>>> 4c1e9aa... mido: XiaomiParts: add Charging LED Blinking Intensity
 </resources>
