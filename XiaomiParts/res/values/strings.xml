@@ -259,5 +259,19 @@
     <string name="boost_title">Boost</string>
     <string name="touchboost_title">Enable Touchboost</string>
     <string name="touchboost_summary">Boost cpu when touch detected for smooth experience</string>
+<<<<<<< HEAD
 >>>>>>> c094bfb... mido: XiaomiParts: TouchBoost Improvements
+=======
+
+    <!-- GPU Boost Profiles -->
+    <string name="gpuboost_title">GPU Boost</string>
+    <string name="gpuboost_summary">Boost your gpu without compromising power efficiency</string>
+    <string name="gpuboost_dialogTitle">Select your GPU boost level</string>
+
+    <!-- Values for GPU Boost Presets -->
+    <string name="gpuboost_high">High</string>
+    <string name="gpuboost_medium">Medium</string>
+    <string name="gpuboost_low">Low</string>
+    <string name="gpuboost_disable">Disable</string>
+>>>>>>> c6f87a8... mido: XiaomiParts: Add GPU Boost Controler
 </resources>

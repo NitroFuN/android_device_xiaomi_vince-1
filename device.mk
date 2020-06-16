@@ -55,6 +55,60 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.usb.rc \
     init.vince.rc \
     init.safailnet.rc
+<<<<<<< HEAD
+=======
+=======
+    fstab.qcom \
+    init.msm.usb.configfs.rc \
+    init.qcom.early_boot.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.rc \
+    init.qcom.sh \
+    init.qcom.usb.rc \
+    init.target.rc \
+    init.xiaomi_parts.rc \
+    ueventd.qcom.rc \
+<<<<<<< HEAD
+=======
+    init.safailnet.rc
+    init.gpuboost.rc \
+    init.gpuboost.sh
+>>>>>>> c6f87a8... mido: XiaomiParts: Add GPU Boost Controler
+
+# RenderScript HAL
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
+
+# RIL
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.0 \
+    android.hardware.radio@1.2 \
+    android.hardware.radio@1.3 \
+    android.hardware.radio@1.4 \
+    android.hardware.radio.config@1.0 \
+    android.hardware.radio.config@1.1 \
+    android.hardware.radio.config@1.2 \
+    android.hardware.secure_element@1.0 \
+    librmnetctl \
+    libcnefeatureconfig \
+    libxml2 \
+    telephony-ext \
+    rild \
+    libprotobuf-cpp-full \
+    qti-telephony-hidl-wrapper \
+    qti_telephony_hidl_wrapper.xml \
+    qti-telephony-utils \
+    qti_telephony_utils.xml \
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
+
+# Seccomp policy
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/seccomp_policy/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
+    $(LOCAL_PATH)/seccomp_policy/mediaextractor-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
+>>>>>>> fadef3f... mido :XiaomiParts ,Fixed Derp
+>>>>>>> 0fe3911... XiaomiParts: Add GPU Boost Controller
 
 # Sensors
 PRODUCT_COPY_FILES += \

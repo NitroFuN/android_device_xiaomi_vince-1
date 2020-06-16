@@ -31,6 +31,16 @@ import /vendor/etc/init/hw/init.qcom.test.rc
 import /vendor/etc/init/hw/init.target.rc
 import /vendor/etc/init/hw/init.qcom.factory.rc
 import /vendor/etc/init/hw/init.safailnet.rc
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+import /vendor/etc/init/hw/init.xiaomi_parts.rc
+>>>>>>> fadef3f... mido :XiaomiParts ,Fixed Derp
+=======
+import /vendor/etc/init/hw/init.gpuboost.rc
+>>>>>>> c6f87a8... mido: XiaomiParts: Add GPU Boost Controler
+>>>>>>> 0fe3911... XiaomiParts: Add GPU Boost Controller
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
