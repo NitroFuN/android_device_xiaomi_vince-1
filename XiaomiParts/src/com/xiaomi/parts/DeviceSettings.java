@@ -344,8 +344,9 @@ public class DeviceSettings extends PreferenceFragment implements
 
         if (FileUtils.fileWritable(USB_FASTCHARGE_PATH)) {
             mFastcharge = (SecureSettingSwitchPreference) findPreference(PREF_USB_FASTCHARGE);
-            mFastcharge.setChecked(FileUtils.getFileValueAsBoolean(USB_FASTCHARGE_PATH, true));
-            mFastcharge.setOnPreferenceChangeListener(this);
+            mFastcharge.setEnabled(Fastcharge.isSupported());
+            mFastcharge.setChecked(Fastcharge.isCurrentlyEnabled(this.getContext()));
+            mFastcharge.setOnPreferenceChangeListener(new Fastcharge(getContext()));
         } else {
             getPreferenceScreen().removePreference(findPreference(CATEGORY_FASTCHARGE));
         }
@@ -449,6 +450,7 @@ public class DeviceSettings extends PreferenceFragment implements
 >>>>>>> ab3b7cc... mido: XiaomiParts: Disable USB Fastcharge toggle
 =======
 
+<<<<<<< HEAD
 >>>>>>> 1448afb... Revert "mido: XiaomiParts: Disable USB Fastcharge toggle"
             case PREF_USB_FASTCHARGE:
                 FileUtils.setValue(USB_FASTCHARGE_PATH, (boolean) value);
@@ -467,6 +469,8 @@ public class DeviceSettings extends PreferenceFragment implements
 =======
 =======
 >>>>>>> 494253b... mido: XiaomiParts: Add FPS info
+=======
+>>>>>>> 8f858c9... mido: XiaomiParts: USB Fastcharge Improvement
             case PREF_KEY_FPS_INFO:
                 boolean enabled = (Boolean) value;
                 Intent fpsinfo = new Intent(this.getContext(), FPSInfoService.class);
