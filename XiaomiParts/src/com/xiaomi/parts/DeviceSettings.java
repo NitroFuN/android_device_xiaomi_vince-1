@@ -168,6 +168,7 @@ public class DeviceSettings extends PreferenceFragment implements
 >>>>>>> 494253b... mido: XiaomiParts: Add FPS info
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private SecureSettingSwitchPreference mEnableHAL3;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -204,6 +205,8 @@ public class DeviceSettings extends PreferenceFragment implements
 =======
 =======
     public static final String CATEGORY_TOUCHBOOST = "msm_touchboost";
+=======
+>>>>>>> df09bdf... mido: XiaomiParts: Fix Parallax Hub Crash for other Kernel
     public static final String PREF_MSM_TOUCHBOOST = "touchboost";
     public static final String MSM_TOUCHBOOST_PATH = "/sys/module/msm_performance/parameters/touchboost";
     public static final String KEY_FLASH = "yellow_flash";
@@ -400,7 +403,7 @@ public class DeviceSettings extends PreferenceFragment implements
             mTouchboost.setChecked(Touchboost.isCurrentlyEnabled(this.getContext()));
             mTouchboost.setOnPreferenceChangeListener(new Touchboost(getContext()));
         } else {
-            getPreferenceScreen().removePreference(findPreference(CATEGORY_TOUCHBOOST));
+            getPreferenceScreen().removePreference(findPreference(PREF_MSM_TOUCHBOOST));
         }
 
         mGPUBOOST = (SecureSettingListPreference) findPreference(PREF_GPUBOOST);
