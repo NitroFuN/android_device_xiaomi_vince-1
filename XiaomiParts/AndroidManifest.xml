@@ -158,14 +158,23 @@
         </service>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 494253b... mido: XiaomiParts: Add FPS info
 =======
 >>>>>>> 494253b... mido: XiaomiParts: Add FPS info
 =======
 
+=======
+>>>>>>> e3a2de3... XiaomiParts: Add GPU and CPU Boost QS Tiles
         <service
             android:name=".CpuboostTileService"
             android:icon="@drawable/ic_cpuboost_qs"
+=======
+
+        <service
+            android:name=".CpuboostTileService"
+            android:icon="@drawable/ic_cpuboost"
+>>>>>>> 4261289... mido: XiaomiParts: Add GPU and CPU Boost QS Tiles
             android:label="@string/cpuboost_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
@@ -175,13 +184,18 @@
 
         <service
             android:name=".GpuboostTileService"
+<<<<<<< HEAD
             android:icon="@drawable/ic_gpuboost_qs"
+=======
+            android:icon="@drawable/ic_gpuboost"
+>>>>>>> 4261289... mido: XiaomiParts: Add GPU and CPU Boost QS Tiles
             android:label="@string/gpuboost_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4261289... mido: XiaomiParts: Add GPU and CPU Boost QS Tiles
@@ -192,4 +206,11 @@
     </application>
 >>>>>>> e363686... mido: XiaomiParts: Add LogTile
 >>>>>>> 20bf2aa... XiaomiParts: Add LogTile
+=======
+   </application>
+=======
+
+    </application>
+>>>>>>> 4261289... mido: XiaomiParts: Add GPU and CPU Boost QS Tiles
+>>>>>>> e3a2de3... XiaomiParts: Add GPU and CPU Boost QS Tiles
 </manifest>
