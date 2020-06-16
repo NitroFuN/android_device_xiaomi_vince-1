@@ -39,8 +39,15 @@ import /vendor/etc/init/hw/init.xiaomi_parts.rc
 >>>>>>> fadef3f... mido :XiaomiParts ,Fixed Derp
 =======
 import /vendor/etc/init/hw/init.gpuboost.rc
+<<<<<<< HEAD
 >>>>>>> c6f87a8... mido: XiaomiParts: Add GPU Boost Controler
+<<<<<<< HEAD
 >>>>>>> 0fe3911... XiaomiParts: Add GPU Boost Controller
+=======
+=======
+import /vendor/etc/init/hw/init.cpuboost.rc
+>>>>>>> 6544015... mido: XiaomiParts: Add CPU Boost profile
+>>>>>>> a0d22cb...  XiaomiParts: Add CPU Boost profile
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug

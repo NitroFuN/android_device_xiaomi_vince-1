@@ -273,5 +273,19 @@
     <string name="gpuboost_medium">Medium</string>
     <string name="gpuboost_low">Low</string>
     <string name="gpuboost_disable">Disable</string>
+<<<<<<< HEAD
 >>>>>>> c6f87a8... mido: XiaomiParts: Add GPU Boost Controler
+=======
+
+    <!-- CPU Boost Profiles -->
+    <string name="cpuboost_title">CPU Boost</string>
+    <string name="cpuboost_summary">Boost your cpu for better Experience</string>
+    <string name="cpuboost_dialogTitle">Select your CPU Boost level</string>
+
+    <!-- Values for CPU Boost Presets -->
+    <string name="cpuboost_high">High</string>
+    <string name="cpuboost_medium">Medium</string>
+    <string name="cpuboost_low">Low</string>
+    <string name="cpuboost_disable">Disable</string>
+>>>>>>> 6544015... mido: XiaomiParts: Add CPU Boost profile
 </resources>

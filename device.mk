@@ -72,8 +72,14 @@ PRODUCT_PACKAGES += \
 =======
     init.safailnet.rc
     init.gpuboost.rc \
+<<<<<<< HEAD
     init.gpuboost.sh
 >>>>>>> c6f87a8... mido: XiaomiParts: Add GPU Boost Controler
+=======
+    init.gpuboost.sh \
+    init.cpuboost.rc \
+    init.cpuboost.sh
+>>>>>>> 6544015... mido: XiaomiParts: Add CPU Boost profile
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
