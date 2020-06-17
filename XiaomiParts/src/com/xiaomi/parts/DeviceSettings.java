@@ -102,8 +102,7 @@ public class DeviceSettings extends PreferenceFragment implements
 >>>>>>> e4c0ed6... XiaomiParts: Fix Torch
 =======
     public static final String PREF_CHARGING_LED = "charging_led";
-    public static final String CHARGING_LED_PATH = "/sys/devices/soc/leds-atc-25" +
-            "/driver/leds-atc-25/leds/charging/max_brightness";
+    public static final String CHARGING_LED_PATH = "/sys/class/leds/charging/max_brightness";
 
 >>>>>>> 4c1e9aa... mido: XiaomiParts: add Charging LED Blinking Intensity
     public static final String PREF_BACKLIGHT_DIMMER = "backlight_dimmer";
