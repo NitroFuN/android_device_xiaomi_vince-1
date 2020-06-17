@@ -59,6 +59,7 @@ import com.xiaomi.parts.preferences.YellowFlashPreference;
 public class DeviceSettings extends PreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
+<<<<<<< HEAD
 
     final static String PREF_TORCH_BRIGHTNESS = "torch_brightness";
 <<<<<<< HEAD
@@ -95,6 +96,10 @@ public class DeviceSettings extends PreferenceFragment implements
 =======
 >>>>>>> e3cd0f3... mido: XiaomiParts:: Implement New CustomSeekBar
 =======
+=======
+    public static final String KEY_YELLOW_TORCH_BRIGHTNESS = "yellow_torch_brightness";
+    public static final String KEY_WHITE_TORCH_BRIGHTNESS = "white_torch_brightness";
+>>>>>>> 3acb0fc... mido: XiaomiParts: Separate Yellow and White Torch Brightness
     public static final String TORCH_1_BRIGHTNESS_PATH = "/sys/class/leds/led:torch_0/max_brightness";
     public static final String TORCH_2_BRIGHTNESS_PATH = "/sys/class/leds/led:torch_1/max_brightness";
 
@@ -238,9 +243,14 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String PREF_CPUBOOST = "cpuboost";
     public static final String CPUBOOST_SYSTEM_PROPERTY = "persist.cpuboost.profile";
 
+<<<<<<< HEAD
 >>>>>>> c6f87a8... mido: XiaomiParts: Add GPU Boost Controler
 >>>>>>> 0fe3911... XiaomiParts: Add GPU Boost Controller
     private CustomSeekBarPreference mTorchBrightness;
+=======
+    private CustomSeekBarPreference mWhiteTorchBrightness;
+    private CustomSeekBarPreference mYellowTorchBrightness;
+>>>>>>> 3acb0fc... mido: XiaomiParts: Separate Yellow and White Torch Brightness
     private LedBlinkPreference mLedBlink;
     private YellowFlashPreference mYellowFlash;
     private VibratorStrengthPreference mVibratorStrength;
@@ -295,6 +305,7 @@ public class DeviceSettings extends PreferenceFragment implements
 
         String device = FileUtils.getStringProp("ro.build.product", "unknown");
 
+<<<<<<< HEAD
         mEnableHAL3 = (SecureSettingSwitchPreference) findPreference(PREF_ENABLE_HAL3);
         mEnableHAL3.setChecked(FileUtils.getProp(HAL3_SYSTEM_PROPERTY, false));
         mEnableHAL3.setOnPreferenceChangeListener(this);
@@ -303,6 +314,15 @@ public class DeviceSettings extends PreferenceFragment implements
         mTorchBrightness.setEnabled(FileUtils.fileWritable(TORCH_1_BRIGHTNESS_PATH) &&
                 FileUtils.fileWritable(TORCH_2_BRIGHTNESS_PATH));
         mTorchBrightness.setOnPreferenceChangeListener(this);
+=======
+        mWhiteTorchBrightness = (CustomSeekBarPreference) findPreference(KEY_WHITE_TORCH_BRIGHTNESS);
+        mWhiteTorchBrightness.setEnabled(FileUtils.fileWritable(TORCH_1_BRIGHTNESS_PATH));
+        mWhiteTorchBrightness.setOnPreferenceChangeListener(this);
+
+        mYellowTorchBrightness = (CustomSeekBarPreference) findPreference(KEY_YELLOW_TORCH_BRIGHTNESS);
+        mYellowTorchBrightness.setEnabled(FileUtils.fileWritable(TORCH_2_BRIGHTNESS_PATH));
+        mYellowTorchBrightness.setOnPreferenceChangeListener(this);
+>>>>>>> 3acb0fc... mido: XiaomiParts: Separate Yellow and White Torch Brightness
 
         PreferenceCategory displayCategory = (PreferenceCategory) findPreference(CATEGORY_DISPLAY);
 
@@ -451,12 +471,19 @@ public class DeviceSettings extends PreferenceFragment implements
     public boolean onPreferenceChange(Preference preference, Object value) {
         final String key = preference.getKey();
         switch (key) {
+<<<<<<< HEAD
             case PREF_ENABLE_HAL3:
                 FileUtils.setProp(HAL3_SYSTEM_PROPERTY, (Boolean) value);
                 break;
 
             case PREF_TORCH_BRIGHTNESS:
+=======
+            case KEY_WHITE_TORCH_BRIGHTNESS:
+>>>>>>> 3acb0fc... mido: XiaomiParts: Separate Yellow and White Torch Brightness
                 FileUtils.setValue(TORCH_1_BRIGHTNESS_PATH, (int) value);
+                break;
+
+            case KEY_YELLOW_TORCH_BRIGHTNESS:
                 FileUtils.setValue(TORCH_2_BRIGHTNESS_PATH, (int) value);
                 break;
 

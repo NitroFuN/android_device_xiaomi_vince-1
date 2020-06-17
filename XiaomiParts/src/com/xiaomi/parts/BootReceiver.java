@@ -85,6 +85,7 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
 
         FileUtils.setValue(TORCH_1_BRIGHTNESS_PATH,
                 Settings.Secure.getInt(context.getContentResolver(),
+<<<<<<< HEAD
                         DeviceSettings.PREF_TORCH_BRIGHTNESS, 100));
         FileUtils.setValue(TORCH_2_BRIGHTNESS_PATH,
                 Settings.Secure.getInt(context.getContentResolver(),
@@ -94,6 +95,12 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
                 context.getContentResolver(), DeviceSettings.PREF_VIBRATION_STRENGTH, 80) / 100.0 * (DeviceSettings.MAX_VIBRATION - DeviceSettings.MIN_VIBRATION) + DeviceSettings.MIN_VIBRATION);
 =======
 >>>>>>> e3cd0f3... mido: XiaomiParts:: Implement New CustomSeekBar
+=======
+                        DeviceSettings.KEY_WHITE_TORCH_BRIGHTNESS, 100));
+        FileUtils.setValue(DeviceSettings.TORCH_2_BRIGHTNESS_PATH,
+                Settings.Secure.getInt(context.getContentResolver(),
+                        DeviceSettings.KEY_YELLOW_TORCH_BRIGHTNESS, 100));
+>>>>>>> 3acb0fc... mido: XiaomiParts: Separate Yellow and White Torch Brightness
         int gain = Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_HEADPHONE_GAIN, 4);
         FileUtils.setValue(HEADPHONE_GAIN_PATH, gain + " " + gain);
