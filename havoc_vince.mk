@@ -26,6 +26,25 @@ $(call inherit-product, device/xiaomi/vince/device.mk)
 # Inherit some common havocOS stuff.
 $(call inherit-product, vendor/havoc/config/common_full_phone.mk)
 
+<<<<<<< HEAD:zenx_vince.mk
+=======
+# Boot Animation res
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# Gapps
+TARGET_GAPPS_ARCH := arm64
+
+# Maintainer
+PRODUCT_PROPERTY_OVERRIDES += \
+        ro.xtended.maintainer=☭GH05T☭
+
+#Bleed Zenx
+ZENX_BUILD_TYPE := OFFICIAL
+
+# Google Recorder
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+
+>>>>>>> d0d7641d... mido: Enable Google Recorder for all:zenx_mido.mk
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := vince
 PRODUCT_NAME := havoc_vince
