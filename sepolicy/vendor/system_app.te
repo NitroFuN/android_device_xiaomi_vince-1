@@ -76,4 +76,9 @@ get_prop(system_app, cpucore_prop);
 =======
 allow system_app lkm_prop:property_service set;
 get_prop(system_app, lkm_prop);
+<<<<<<< HEAD
 >>>>>>> 9917894... mido: XiaomiParts: Add LKM Profiles
+=======
+allow system_app tcp_prop:property_service set;
+get_prop(system_app, tcp_prop);
+>>>>>>> e1339fb... mido: XiaomiParts: Add TCP Congestion Algorithm
