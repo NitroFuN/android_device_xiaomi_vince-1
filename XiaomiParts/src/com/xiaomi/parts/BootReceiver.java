@@ -120,11 +120,16 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
         FileUtils.setValue(DeviceSettings.SPEAKER_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_SPEAKER_GAIN, 0));
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 82e3f4e... mido: XiaomiParts: Add Speaker Gain
        // FileUtils.setValue(DeviceSettings.USB_FASTCHARGE_PATH, Settings.Secure.getInt(context.getContentResolver(),
        //         DeviceSettings.PREF_USB_FASTCHARGE, 0));
 >>>>>>> ab3b7cc... mido: XiaomiParts: Disable USB Fastcharge toggle
 =======
+=======
+        FileUtils.setValue(DeviceSettings.HIGH_AUDIO_PATH, Settings.Secure.getInt(context.getContentResolver(),
+                DeviceSettings.HIGH_PERF_AUDIO, 0));
+>>>>>>> 20d6ff7... mido: XiaomiParts: Add Audio High Performance mode toggle
         FileUtils.setValue(DeviceSettings.USB_FASTCHARGE_PATH, Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_USB_FASTCHARGE, 0));
 <<<<<<< HEAD
