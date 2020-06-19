@@ -203,10 +203,37 @@
     <!-- Button brightness -->
     <bool name="config_button_brightness_support">true</bool>
 
+<<<<<<< HEAD
     <!-- Whether to post reset runnable for all clients. Needed for some older
          vendor fingerprint HAL implementati
+=======
+<<<<<<< HEAD
+>>>>>>> 0ee67e3... mido : Add Xiaomi Parts To ZenHub
     <!-- Add Xiaomiparts To ZenHub-->
     <string name="config_device_parts_package_name" translatable="false">com.xiaomi.parts</string>
     <string name="config_device_parts_package_activity" translatable="false">com.xiaomi.parts.DeviceSettingsActivity</string>
 
+=======
+    <!-- Whether to post reset runnable for all clients. Needed for some older
+         vendor fingerprint HAL implementations. -->
+    <bool name="config_fingerprintPostResetRunnableForAllClients">true</bool>
+
+    <!-- The component name, flattened to a string, for the default autofill service
+         to  enabled for an user. This service must be trusted, as it can be activated
+         without explicit consent of the user. If no autofill service with the
+          specified name exists on the device, autofill will be disabled by default.
+    -->
+    <string name="config_defaultAutofillService" translatable="false">com.google.android.gms/.autofill.service.AutofillService</string>
+
+    <!-- Sets the paths that are needed for SystemInfo-->
+    <string name="config_cpu_temp_path" translatable="false">/sys/class/thermal/thermal_zone0/temp</string>
+    <string name="config_battery_temp_path" translatable="false">sys/class/power_supply/battery/temp</string>
+    <string name="config_gpu_clock_path" translatable="false">/sys/kernel/gpu/gpu_clock</string>
+    <string name="config_gpu_busy_path" translatable="false">/sys/kernel/gpu/gpu_busy</string>
+    <string name="config_battery_level_path" translatable="false">/sys/class/power_supply/battery/capacity</string>
+
+    <!-- Add Xiaomiparts To ZenHub-->
+    <string name="config_device_parts_package_name" translatable="false">com.xiaomi.parts</string>
+    <string name="config_device_parts_package_activity" translatable="false">com.xiaomi.parts.DeviceSettingsActivity</string>
+>>>>>>> 394428f... mido : Add Xiaomi Parts To ZenHub
 </resources>
