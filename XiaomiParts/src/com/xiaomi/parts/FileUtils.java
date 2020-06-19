@@ -135,7 +135,18 @@ class FileUtils {
         return defValue;
     }
 
+<<<<<<< HEAD
 >>>>>>> 99bad28... mido: XiaomiParts: Add Backlight Dimmer toggle
+=======
+    static boolean getFilesValueAsBoolean(String filename, boolean defValue) {
+        String fileValue = readLine(filename);
+        if (fileValue != null) {
+            return !fileValue.equals("N");
+        }
+        return defValue;
+    }
+
+>>>>>>> 35f84d2... mido: XiaomiParts: Fix Backlight Dimmer switch
     static void setProp(String prop, boolean value) {
         if (value) {
             SystemProperties.set(prop, "1");
