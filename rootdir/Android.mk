@@ -140,5 +140,27 @@ LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := etc/init.cpuboost.sh
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_EXECUTABLES)
 include $(BUILD_PREBUILT)
+<<<<<<< HEAD
 >>>>>>> 6544015... mido: XiaomiParts: Add CPU Boost profile
+<<<<<<< HEAD
 >>>>>>> a0d22cb...  XiaomiParts: Add CPU Boost profile
+=======
+=======
+
+include $(CLEAR_VARS)
+LOCAL_MODULE       := init.parallax.rc
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := etc/init.parallax.rc
+LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init/hw
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE       := init.parallax.sh
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := etc/init.parallax.sh
+LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_EXECUTABLES)
+include $(BUILD_PREBUILT)
+>>>>>>> fe69e78... mido: XiaomiParts: Add MSM Thermal Control
+>>>>>>> 7bdaa2b... XiaomiParts: Add MSM Thermal Control

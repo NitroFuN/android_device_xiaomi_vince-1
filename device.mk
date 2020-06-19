@@ -78,8 +78,14 @@ PRODUCT_PACKAGES += \
 =======
     init.gpuboost.sh \
     init.cpuboost.rc \
+<<<<<<< HEAD
     init.cpuboost.sh
 >>>>>>> 6544015... mido: XiaomiParts: Add CPU Boost profile
+=======
+    init.cpuboost.sh \
+    init.parallax.rc \
+    init.parallax.sh
+>>>>>>> fe69e78... mido: XiaomiParts: Add MSM Thermal Control
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \

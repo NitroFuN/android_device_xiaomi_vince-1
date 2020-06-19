@@ -100,7 +100,16 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
         FileUtils.setValue(DeviceSettings.TORCH_2_BRIGHTNESS_PATH,
                 Settings.Secure.getInt(context.getContentResolver(),
                         DeviceSettings.KEY_YELLOW_TORCH_BRIGHTNESS, 100));
+<<<<<<< HEAD
 >>>>>>> 3acb0fc... mido: XiaomiParts: Separate Yellow and White Torch Brightness
+=======
+        FileUtils.setValue(DeviceSettings.MSM_THERMAL_PATH, Settings.Secure.getInt(context.getContentResolver(),
+                DeviceSettings.PERF_MSM_THERMAL, 0));
+        FileUtils.setValue(DeviceSettings.CORE_CONTROL_PATH, Settings.Secure.getInt(context.getContentResolver(),
+                DeviceSettings.PERF_CORE_CONTROL, 0));
+        FileUtils.setValue(DeviceSettings.VDD_RESTRICTION_PATH, Settings.Secure.getInt(context.getContentResolver(),
+                DeviceSettings.PERF_VDD_RESTRICTION, 0));
+>>>>>>> fe69e78... mido: XiaomiParts: Add MSM Thermal Control
         int gain = Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_HEADPHONE_GAIN, 4);
         FileUtils.setValue(HEADPHONE_GAIN_PATH, gain + " " + gain);

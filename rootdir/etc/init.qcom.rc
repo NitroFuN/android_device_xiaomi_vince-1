@@ -46,8 +46,15 @@ import /vendor/etc/init/hw/init.gpuboost.rc
 =======
 =======
 import /vendor/etc/init/hw/init.cpuboost.rc
+<<<<<<< HEAD
 >>>>>>> 6544015... mido: XiaomiParts: Add CPU Boost profile
+<<<<<<< HEAD
 >>>>>>> a0d22cb...  XiaomiParts: Add CPU Boost profile
+=======
+=======
+import /vendor/etc/init/hw/init.parallax.rc
+>>>>>>> fe69e78... mido: XiaomiParts: Add MSM Thermal Control
+>>>>>>> 7bdaa2b... XiaomiParts: Add MSM Thermal Control
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
@@ -293,6 +300,14 @@ on boot
     chmod 660 /sys/devices/platform/kcal_ctrl.0/kcal_val
     chmod 660 /sys/devices/platform/kcal_ctrl.0/kcal_min
     chmod 660 /sys/devices/platform/kcal_ctrl.0/kcal
+
+    # Msm Thermal
+    chown system system /sys/module/msm_thermal/parameters/enabled
+    chmod 0660 /sys/module/msm_thermal/parameters/enabled
+    chown system system /sys/module/msm_thermal/core_control/enabled
+    chmod 0660 /sys/module/msm_thermal/core_control/enabled
+    chown system system /sys/module/msm_thermal/vdd_restriction/enabled
+    chmod 0660 /sys/module/msm_thermal/vdd_restriction/enabled
 
     # High Performance Audio
     chown system system /sys/module/snd_soc_wcd9330/parameters/high_perf_mode
