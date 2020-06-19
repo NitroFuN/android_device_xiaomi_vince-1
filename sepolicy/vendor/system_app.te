@@ -71,4 +71,9 @@ allow system_app sysfs_corecontrol:file { open read getattr write };
 allow system_app sysfs_vddrestrict:file { open read getattr write };
 allow system_app cpucore_prop:property_service set;
 get_prop(system_app, cpucore_prop);
+<<<<<<< HEAD
 >>>>>>> fe69e78... mido: XiaomiParts: Add MSM Thermal Control
+=======
+allow system_app lkm_prop:property_service set;
+get_prop(system_app, lkm_prop);
+>>>>>>> 9917894... mido: XiaomiParts: Add LKM Profiles
