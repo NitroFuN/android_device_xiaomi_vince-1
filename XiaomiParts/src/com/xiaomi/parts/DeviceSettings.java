@@ -289,8 +289,15 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String LKM_SYSTEM_PROPERTY = "persist.lkm.profile";
     public static final String PREF_TCP = "tcpcongestion";
     public static final String TCP_SYSTEM_PROPERTY = "persist.tcp.profile";
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> fe69e78... mido: XiaomiParts: Add MSM Thermal Control
+=======
+=======
+>>>>>>> e1339fb... mido: XiaomiParts: Add TCP Congestion Algorithm
+
+>>>>>>> 8dbeb06... Add TCP Congestion Algorithm
     public static final String PREF_GPUBOOST = "gpuboost";
     public static final String GPUBOOST_SYSTEM_PROPERTY = "persist.gpuboost.profile";
     public static final String PREF_CPUBOOST = "cpuboost";

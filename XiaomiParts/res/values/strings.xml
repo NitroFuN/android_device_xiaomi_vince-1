@@ -371,10 +371,16 @@
     <string name="tcpcongestion_highspeed">highspeed</string>
     <string name="tcpcongestion_htcp">htcp</string>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> e1339fb... mido: XiaomiParts: Add TCP Congestion Algorithm
 =======
 
 =======
 >>>>>>> e363686... mido: XiaomiParts: Add LogTile
 >>>>>>> 20bf2aa... XiaomiParts: Add LogTile
+=======
+
+=======
+>>>>>>> e1339fb... mido: XiaomiParts: Add TCP Congestion Algorithm
+>>>>>>> 8dbeb06... Add TCP Congestion Algorithm
 </resources>

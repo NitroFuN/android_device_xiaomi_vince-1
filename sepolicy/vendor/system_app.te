@@ -78,6 +78,7 @@ get_prop(system_app, cpucore_prop);
 allow system_app lkm_prop:property_service set;
 get_prop(system_app, lkm_prop);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 9917894... mido: XiaomiParts: Add LKM Profiles
 =======
 allow system_app tcp_prop:property_service set;
@@ -88,3 +89,7 @@ allow system_app sysfs_leds:dir search;
 allow system_app sysfs_leds:file { open getattr write };
 allow system_app sysfs:file { getattr open read write };
 >>>>>>> 263864f... mido: XiaomiParts: Add USB fastcharge switch
+=======
+allow system_app tcp_prop:property_service set;
+get_prop(system_app, tcp_prop);
+>>>>>>> e1339fb... mido: XiaomiParts: Add TCP Congestion Algorithm
