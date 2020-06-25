@@ -42,39 +42,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.goodix.sh \
     init.recovery.qcom.rc \
-<<<<<<< HEAD
     init.recovery.qcom.usb.rc \
-    init.vince.rc
-=======
-    init.target.rc \
-    init.oneplus3.rc \
-    ueventd.qcom.rc \
+    init.vince.rc \
     init.safailnet.rc
-
-# RCS
-PRODUCT_PACKAGES += \
-    rcs_service_aidl \
-    rcs_service_aidl.xml \
-    rcs_service_api \
-    rcs_service_api.xml
-
-# Recovery
-PRODUCT_PACKAGES += \
-    librecovery_updater_op3
-
-# RenderScript HAL
-PRODUCT_PACKAGES += \
-    android.hardware.renderscript@1.0-impl
-
-# RIL
-PRODUCT_PACKAGES += \
-    android.hardware.radio@1.4 \
-    android.hardware.radio.config@1.0 \
-    android.hardware.secure_element@1.0 \
-    librmnetctl \
-    libxml2 \
-    libprotobuf-cpp-full
->>>>>>> 9a106c56... op3: Add safetynet hack
 
 # Sensors
 PRODUCT_COPY_FILES += \
