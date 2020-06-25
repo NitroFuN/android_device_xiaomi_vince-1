@@ -21,15 +21,14 @@
 */
 -->
 
-<<<<<<< HEAD
+
 <!-- These resources are around just to allow their values to be customized
      for different hardware and product builds. -->
 <resources>
 
     <!-- Rounded display corners-->
     <dimen name="rounded_corner_radius">18dp</dimen>
-=======
-<resources>
-<dimen name="status_bar_height_portrait">94px</dimen>
->>>>>>> 8d929d6... mido : Fix Dual Status Bar Padding Issue
+    <!-- Fix Dual Status Bar Paddinng -->  
+  <dimen name="status_bar_height_portrait">94px</dimen>
+
 </resources>
