@@ -372,6 +372,7 @@
     <string name="tcpcongestion_htcp">htcp</string>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> e1339fb... mido: XiaomiParts: Add TCP Congestion Algorithm
 =======
 
@@ -383,4 +384,6 @@
 =======
 >>>>>>> e1339fb... mido: XiaomiParts: Add TCP Congestion Algorithm
 >>>>>>> 8dbeb06... Add TCP Congestion Algorithm
+=======
+>>>>>>> a931bd2... Fixed All Errors
 </resources>

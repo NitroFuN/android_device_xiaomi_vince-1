@@ -134,12 +134,19 @@ public class DeviceSettings extends PreferenceFragment implements
 >>>>>>> 9b83574... XiaomiParts: Add new Vibration Control
     public static final String CATEGORY_DISPLAY = "display";
     public static final String PREF_DEVICE_KCAL = "device_kcal";
+<<<<<<< HEAD
 >>>>>>> d954cf5... Fix some stuff for XiaomiParts
 =======
+=======
+    public static final String PREF_SPECTRUM = "spectrum";
+    public static final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
+
+>>>>>>> a931bd2... Fixed All Errors
     public static final String PREF_VIBRATION_STRENGTH = "vibration_strength";
     public static final String VIBRATION_STRENGTH_PATH = "/sys/devices/virtual/timed_output/vibrator/vtg_level";
 
     // value of vtg_min and vtg_max
+<<<<<<< HEAD
     public static final int MIN_VIBRATION = 116;
     public static final int MAX_VIBRATION = 3596;
 
@@ -158,7 +165,12 @@ public class DeviceSettings extends PreferenceFragment implements
     private static final String PREF_SPECTRUM = "spectrum";
     private static final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
 =======
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ec00d94... Fixed All Derps
+
+>>>>>>> a931bd2... Fixed All Errors
     public static final String PREF_SPECTRUM = "spectrum";
     public static final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
 
@@ -289,13 +301,15 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String LKM_SYSTEM_PROPERTY = "persist.lkm.profile";
     public static final String PREF_TCP = "tcpcongestion";
     public static final String TCP_SYSTEM_PROPERTY = "persist.tcp.profile";
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> fe69e78... mido: XiaomiParts: Add MSM Thermal Control
 =======
 =======
 >>>>>>> e1339fb... mido: XiaomiParts: Add TCP Congestion Algorithm
+=======
+>>>>>>> a931bd2... Fixed All Errors
 
 >>>>>>> 8dbeb06... Add TCP Congestion Algorithm
     public static final String PREF_GPUBOOST = "gpuboost";
